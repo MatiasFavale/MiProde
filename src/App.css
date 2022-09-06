@@ -1,0 +1,155 @@
+#app {
+  margin: 0 auto;
+}
+
+.table{
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.imageEquipo{
+  text-align: center;  
+}
+nav {
+  padding: 20px 0 20px 0;
+}
+
+.nav-link{
+  color:white
+}
+
+.selectedPlayer{
+  color: #3ed13e;
+}
+
+.imgFlag{
+  width: 25px;
+  height: 25px;
+  background-size: cover;
+  border-radius: 59%;
+  box-shadow: 1px 1px 2px #d316162e, -1px 0 2px #ef24242e;
+}
+
+.imgFlagSelect{
+  width: 250px;
+  height: 250px;
+  background-size: cover;
+  border-radius: 59%;
+  box-shadow: 1px 1px 2px #d316162e, -1px 0 2px #ef24242e;
+}
+
+.withTableTH{
+  width: 450px;
+}
+
+.fondoClass{
+  background-image: url("./img/fondoQatar.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.imgFlagPAI{
+  content:url("./img/PAI.svg");
+}
+
+
+.classA{
+  border-bottom-color: orange;
+  border-left-color: orange;
+  
+}
+.classB{
+  border-bottom-color: blue;
+  border-left-color: blue;
+}
+.classC{
+  border-bottom-color: green;
+  border-left-color: green;
+}
+.classD{
+  border-bottom-color: yellow;
+  border-left-color: yellow;
+}
+.classE{
+  border-bottom-color: red;
+  border-left-color: red;
+}
+.classF{
+  border-bottom-color: skyblue;
+  border-left-color: skyblue;
+}
+.classG{
+  border-bottom-color: #9500ff;
+  border-left-color: #9500ff;
+}
+
+.classH{
+  border-bottom-color: #9dff00;
+  border-left-color: #9dff00;
+}
+
+.titleTable{
+  color: #fff;
+  background: #2c2e2b;
+  text-shadow: 0 2px 2px #000;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+
+
+.imagePlayer{
+  max-width: 100%;
+  background-size: cover;
+   /*border-radius: 59%;
+ box-shadow: 1px 1px 2px #d316162e, -1px 0 2px #ef24242e;
+ */
+}
+
+.xGrupo{
+  width: 380px;
+  float: left;
+  margin-left: 15px;
+}
+
+.grupos{
+  width: 900px;
+}
+
+.tabs{
+  max-width: 380px;
+}
+.tableHeight{
+  max-height: 580px;
+  height: 580px;
+}
+
+.tableOctHeight{
+  max-height: 390px;
+  height: 390px;
+}
+
+.tableCuaHeight {
+  max-height: 290px;
+  height: 290px;
+}
+
+.tableFinalesHeight {
+  max-height: 190px;
+  height: 190px;
+}
+
+.nombreSpam{
+  font-size: 9px;
+}
+
+.goldImage{
+  background-image: linear-gradient(110deg, #ffff90 0, #d5c10c 50%, #827600 100%);
+  border-width: 3px;
+  border-style: solid;
+  border-color: black;
+}
+
+.labelFont{
+  font-weight: bold;
+  color: black;
+}

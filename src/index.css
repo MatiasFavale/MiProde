@@ -1,0 +1,305 @@
+#app {
+  margin: 0 auto;
+}
+
+.table{
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.imageEquipo{
+  text-align: center;  
+}
+nav {
+  padding: 20px 0 20px 0;
+}
+
+.nav-link{
+  color:white
+}
+
+.selectedPlayer{
+  color: #3ed13e;
+}
+
+.imgFlag{
+  width: 25px;
+  height: 25px;
+  background-size: cover;
+  border-radius: 59%;
+  box-shadow: 1px 1px 2px #d316162e, -1px 0 2px #ef24242e;
+}
+
+.imgFlagSelect{
+  width: 250px;
+  height: 250px;
+  background-size: cover;
+  border-radius: 59%;
+  box-shadow: 1px 1px 2px #d316162e, -1px 0 2px #ef24242e;
+}
+
+.imgFlagALE{
+  content:url("./img/ALE.svg");
+}
+.imgFlagARA{
+  content:url("./img/ARA.svg");
+}
+.imgFlagARG{
+  content:url("./img/ARG.svg");
+}
+.imgFlagAUS{
+  content:url("./img/AUS.svg");
+}
+.imgFlagBEL{
+  content:url("./img/BEL.svg");
+}
+.imgFlagBRA{
+  content:url("./img/BRA.svg");
+}
+.imgFlagCAM{
+  content:url("./img/CAM.svg");
+}
+.imgFlagCAN{
+  content:url("./img/CAN.svg");
+}
+.imgFlagCOR{
+  content:url("./img/COR.svg");
+}
+.imgFlagCOS{
+  content:url("./img/COS.svg");
+}
+.imgFlagCRO{
+  content:url("./img/CRO.svg");
+}
+.imgFlagPAI{
+  content:url("./img/PAI.svg");
+}
+.imgFlagDIN{
+  content:url("./img/DIN.svg");
+}
+.imgFlagECU{
+  content:url("./img/ECU.svg");
+}
+.imgFlagESP{
+  content:url("./img/ESP.svg");
+}
+.imgFlagFRA{
+  content:url("./img/FRA.svg");
+}
+.imgFlagGAL{
+  content:url("./img/GAL.svg");
+}
+.imgFlagGHA{
+  content:url("./img/GHA.svg");
+}
+.imgFlagING{
+  content:url("./img/ING.svg");
+}
+.imgFlagIRA{
+  content:url("./img/IRA.svg");
+}
+.imgFlagJAP{
+  content:url("./img/JAP.svg");
+}
+.imgFlagMAR{
+  content:url("./img/MAR.svg");
+}
+.imgFlagMEX{
+  content:url("./img/MEX.svg");
+}
+.imgFlagPAI{
+  content:url("./img/PAI.svg");
+}
+.imgFlagPOL{
+  content:url("./img/POL.svg");
+}
+.imgFlagPOR{
+  content:url("./img/POR.svg");
+}
+.imgFlagQAT{
+  content:url("./img/QAT.svg");
+}
+.imgFlagSEN{
+  content:url("./img/SEN.svg");
+}
+.imgFlagSER{
+  content:url("./img/SER.svg");
+}
+.imgFlagSUI{
+  content:url("./img/SUI.svg");
+}
+.imgFlagTUN{
+  content:url("./img/TUN.svg");
+}
+.imgFlagURU{
+  content:url("./img/URU.svg");
+}
+.imgFlagUSA{
+  content:url("./img/USA.svg");
+}
+
+
+
+.withTableTH{
+  width: 450px;
+}
+
+.fondoClass{
+  background-image: url("./img/fondoQatar.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+
+.classA{
+  border-bottom-color: orange;
+  border-left-color: orange;
+  
+}
+.classB{
+  border-bottom-color: blue;
+  border-left-color: blue;
+}
+.classC{
+  border-bottom-color: green;
+  border-left-color: green;
+}
+.classD{
+  border-bottom-color: yellow;
+  border-left-color: yellow;
+}
+.classE{
+  border-bottom-color: red;
+  border-left-color: red;
+}
+.classF{
+  border-bottom-color: skyblue;
+  border-left-color: skyblue;
+}
+.classG{
+  border-bottom-color: #9500ff;
+  border-left-color: #9500ff;
+}
+
+.classH{
+  border-bottom-color: #9dff00;
+  border-left-color: #9dff00;
+}
+
+.titleTable{
+  color: #fff;
+  background: #2c2e2b;
+  text-shadow: 0 2px 2px #000;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+
+
+.imagePlayer{
+  max-width: 100%;
+  background-size: cover;
+   /*border-radius: 59%;
+ box-shadow: 1px 1px 2px #d316162e, -1px 0 2px #ef24242e;
+ */
+}
+
+.imagePlayerBALE{
+  content:url("./img/players/BALEBACK.svg");
+}
+.imagePlayerDEPAY{
+  content:url("./img/players/DEPAYBACK.svg");
+}
+.imagePlayerERIKSEN{
+  content:url("./img/players/ERIKSENBACK.svg");
+}
+.imagePlayerKANE{
+  content:url("./img/players/KANEBACK.svg");
+}
+.imagePlayerLEWANDOWSKI{
+  content:url("./img/players/LEWANDOWSKIBACK.svg");
+}
+.imagePlayerLUKAKU{
+  content:url("./img/players/LUKAKUBACK.svg");
+}
+.imagePlayerMANE{
+  content:url("./img/players/MANEBACK.svg");
+}
+.imagePlayerMBAPPE{
+  content:url("./img/players/MBAPPEBACK.svg");
+}
+.imagePlayerMESSI{
+  content:url("./img/players/MESSIBACK.svg");
+}
+.imagePlayerMODRIC{
+  content:url("./img/players/MODRICBACK.svg");
+}
+.imagePlayerMORATA{
+  content:url("./img/players/MORATABACK.svg");
+}
+.imagePlayerMULLER{
+  content:url("./img/players/MULLERBACK.svg");
+}
+.imagePlayerNEYMAR{
+  content:url("./img/players/NEYMARBACK.svg");
+}
+.imagePlayerRONALDO{
+  content:url("./img/players/RONALDOBACK.svg");
+}
+.imagePlayerSUAREZ{
+  content:url("./img/players/SUAREZBACK.svg");
+}
+.imagePlayerVLAHOVIC{
+  content:url("./img/players/VLAHOVICBACK.svg");
+}
+
+.xGrupo{
+  width: 380px;
+  float: left;
+  margin-left: 15px;
+}
+
+.grupos{
+  width: 900px;
+}
+
+.tabs{
+  max-width: 380px;
+}
+.tableHeight{
+  max-height: 580px;
+  height: 580px;
+}
+
+.tableOctHeight{
+  max-height: 390px;
+  height: 390px;
+}
+
+.tableCuaHeight {
+  max-height: 220px;
+  height: 220px;
+}
+
+.tableFinalesHeight {
+  max-height: 120px;
+  height: 120px;
+}
+
+.nombreSpam{
+  font-size: 9px;
+}
+
+.goldImage{
+  background-image: linear-gradient(110deg, #ffff90 0, #d5c10c 50%, #827600 100%);
+  border-width: 3px;
+  border-style: solid;
+  border-color: black;
+}
+
+.labelFont{
+  font-weight: bold;
+  color: black;
+}
