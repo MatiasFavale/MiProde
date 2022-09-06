@@ -1,10 +1,12 @@
 import { handleResponse, handleError } from "./apiUtils";
-const baseUrl = process.env.API_URL + "/api/savePointsUser/";
-const baseUrlTwo = process.env.API_URL + "/api/savePointsUserPlayer/"
-const baseUrlThree = process.env.API_URL + "/api/enabledPoints/"
-const baseUrlFour = process.env.API_URL + "/api/matches/";
-const baseUrlFive = process.env.API_URL + "/api/postChampion/";
-const baseUrlSix = process.env.API_URL + "/api/savePointsUserChampion/";
+var sUrlHeroku = "https://miprode.herokuapp.com";
+//process.env.API_URL
+const baseUrl = sUrlHeroku + "/api/savePointsUser/";
+const baseUrlTwo = sUrlHeroku + "/api/savePointsUserPlayer/"
+const baseUrlThree = sUrlHeroku + "/api/enabledPoints/"
+const baseUrlFour = sUrlHeroku + "/api/matches/";
+const baseUrlFive = sUrlHeroku + "/api/postChampion/";
+const baseUrlSix = sUrlHeroku + "/api/savePointsUserChampion/";
 //.local. 
 export function savePointsUser(userLogin, match) {
     debugger;

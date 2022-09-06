@@ -1,6 +1,7 @@
 import { handleResponse, handleError } from "./apiUtils";
-const baseUrl = process.env.API_URL + "/api/matches/";
-const baseUrlProde = process.env.API_URL + "/api/prodes/";
+var sUrlHeroku = "https://miprode.herokuapp.com";
+const baseUrl = sUrlHeroku + "/api/matches/";
+const baseUrlProde = sUrlHeroku + "/api/prodes/";
 
 export function getMatches(userLogin, sFase) {
     var sQuery = '?q={"fase" : {"$regex" :"' + sFase + '"}}';

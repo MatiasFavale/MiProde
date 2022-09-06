@@ -119,7 +119,18 @@ function mapStateToProps(state, ownProps){
   //const slug = ownProps.player.params.slug;  
   debugger;
   var sChampCode = state.campeon.code;
-  state.teams.length === 0 ? sChampCode : state.teams.map(match => {    
+  /*
+  if(state.teams.length === 0){
+    sChampCode = sChampCode;
+  }else{
+    state.teams.map(match => {    
+      if(state.teams.filter(nfilter=>nfilter.isChampion === true).length > 0){
+        sChampCode = state.teams.filter(nfilter=>nfilter.isChampion === true)[0].code;
+      }
+    });
+  }
+  */
+  state.teams.length === 0 ? sChampCode = sChampCode : state.teams.map(match => {    
     if(state.teams.filter(nfilter=>nfilter.isChampion === true).length > 0){
       sChampCode = state.teams.filter(nfilter=>nfilter.isChampion === true)[0].code;
     }

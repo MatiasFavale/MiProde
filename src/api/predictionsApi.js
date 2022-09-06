@@ -1,5 +1,6 @@
 import { handleResponse, handleError } from "./apiUtils";
-const baseUrlProde = process.env.API_URL + "/api/prodes/";
+var sUrlHeroku = "https://miprode.herokuapp.com";
+const baseUrlProde = sUrlHeroku + "/api/prodes/";
 
 export function getProdes(userLogin) {
     const myHeaders = new Headers();

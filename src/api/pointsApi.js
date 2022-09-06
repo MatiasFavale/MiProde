@@ -1,5 +1,6 @@
 import { handleResponse, handleError } from "./apiUtils";
-const baseUrlProde = process.env.API_URL + "/api/points/";
+var sUrlHeroku = "https://miprode.herokuapp.com";
+const baseUrlProde = sUrlHeroku + "/api/points/";
 
 export function savePoints(userLogin, point, isPlayerSelect) {
     debugger;

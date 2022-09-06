@@ -1,7 +1,8 @@
 import { handleResponse, handleError } from "./apiUtils";
-const baseUrl = process.env.API_URL + "/api/user/register/";
-const baseUrlLog = process.env.API_URL + "/api/user/login/";
-const baseUrlCode = process.env.API_URL + "/api/user/registerCodeAuth/";
+var sUrlHeroku = "https://miprode.herokuapp.com";
+const baseUrl = sUrlHeroku + "/api/user/register/";
+const baseUrlLog = sUrlHeroku + "/api/user/login/";
+const baseUrlCode = sUrlHeroku + "/api/user/registerCodeAuth/";
 
 
 export function postUser(user) {
