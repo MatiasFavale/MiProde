@@ -6,9 +6,6 @@ import SelectInput from "../common/SelectInput";
 import TextInput from "../common/TextInput";
 import PropTypes from "prop-types";
 
-import ImagePicker from "react-image-picker";
-import "react-image-picker/dist/index.css";
-
 const PlayerModalPage = ({
   player,
   habilitado,
