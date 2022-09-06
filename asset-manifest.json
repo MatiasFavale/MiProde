@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/miprode/static/css/main.2359a39f.chunk.css",
+    "main.js": "/miprode/static/js/main.80a17f0f.chunk.js",
+    "main.js.map": "/miprode/static/js/main.80a17f0f.chunk.js.map",
+    "runtime-main.js": "/miprode/static/js/runtime-main.852d8570.js",
+    "runtime-main.js.map": "/miprode/static/js/runtime-main.852d8570.js.map",
+    "static/css/2.64d419cc.chunk.css": "/miprode/static/css/2.64d419cc.chunk.css",
+    "static/js/2.ffa86a79.chunk.js": "/miprode/static/js/2.ffa86a79.chunk.js",
+    "static/js/2.ffa86a79.chunk.js.map": "/miprode/static/js/2.ffa86a79.chunk.js.map",
+    "index.html": "/miprode/index.html",
+    "static/css/2.64d419cc.chunk.css.map": "/miprode/static/css/2.64d419cc.chunk.css.map",
+    "static/css/main.2359a39f.chunk.css.map": "/miprode/static/css/main.2359a39f.chunk.css.map",
+    "static/js/2.ffa86a79.chunk.js.LICENSE.txt": "/miprode/static/js/2.ffa86a79.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/miprode/static/media/fondoQatar.0db0b5b1.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.852d8570.js",
+    "static/css/2.64d419cc.chunk.css",
+    "static/js/2.ffa86a79.chunk.js",
+    "static/css/main.2359a39f.chunk.css",
+    "static/js/main.80a17f0f.chunk.js"
+  ]
+}
