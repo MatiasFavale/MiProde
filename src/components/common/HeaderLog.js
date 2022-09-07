@@ -44,12 +44,6 @@ const HeaderLog = () => {
               </NavLink>
               </li>
 
-              <li>
-              <NavLink className="nav-link px-2" to="/rankings" activeStyle={activeStyle}>
-                Ranking
-              </NavLink>
-              </li>
-
             </ul>
 
 

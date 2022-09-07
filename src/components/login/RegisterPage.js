@@ -6,13 +6,20 @@ import RegisterForm  from "./RegisterForm";
 import Spinner from "../common/Spinner";
 import { toast } from "react-toastify";
 
-function RegisterPage({saveRegister, saveRegisterCode, history, ...props}) {
+function RegisterPage({userLogin, saveRegister, saveRegisterCode, history, ...props}) {
   const [user, setUser] = useState({...props.user});
   const [errors, setErrors] = useState({});
   const [saving, setSaving] = useState(false);
 
   useEffect(() => {
-  }, []);
+    if(userLogin.message === "Success"){
+      debugger;
+      localStorage.setItem('userLogin', JSON.stringify(userLogin));
+      console.log(userLogin);
+    }else{
+      setUser({...props.user});
+    }
+  },  [props.user]);
 
   function handleChange(event){
     const {name, value} = event.target;
@@ -60,6 +67,7 @@ function RegisterPage({saveRegister, saveRegisterCode, history, ...props}) {
       saveRegister(user).then((data) => {
         debugger;
         console.log(data);
+        setSaving(false);
         toast.success("Debe introducir el codigo enviado al mail");
         setUser(prevRegister => ({
           ...prevRegister,
@@ -69,7 +77,7 @@ function RegisterPage({saveRegister, saveRegisterCode, history, ...props}) {
           console.log(error);
           setSaving(false);
           setErrors({onSave: error.message});
-          toast.success(error.message);
+          toast.error(error.message);
       });
     }
     
@@ -88,6 +96,7 @@ function RegisterPage({saveRegister, saveRegisterCode, history, ...props}) {
 
 //this.props
 RegisterPage.propTypes = {
+  userLogin: PropTypes.object.isRequired,
   user: PropTypes.object.isRequired,
   saveRegister: PropTypes.func.isRequired,
   history: PropTypes.object.isRequired
@@ -102,6 +111,7 @@ function mapStateToProps(state, ownProps){
   
   return {
     user: {email: "", password:"",name:"", codeAuth:"", habilitado:false},
+    userLogin:state.userLogin,
     register: state.register
   };
 }
