@@ -108,9 +108,15 @@ export function getUserBySlug(register, slug){
 
 function mapStateToProps(state, ownProps){
   const slug = ownProps.match.params.slug;
+  var oUser = {email: "", password:"",name:"", codeAuth:"", habilitado:false};
+  if(state.userLogin.email !== undefined){
+    oUser.email = state.userLogin.email;
+    oUser.password = state.userLogin.password;
+    oUser.name = state.userLogin.name;
+  }
   
   return {
-    user: {email: "", password:"",name:"", codeAuth:"", habilitado:false},
+    user:oUser,
     userLogin:state.userLogin,
     register: state.register
   };
