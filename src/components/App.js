@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 //Switch solo una ruta coincide
 import { Route, Switch } from "react-router-dom";
-import HomePage from "./home/HomePage";
+import HomePage from "./home/ManageHome";
 //import AboutPage from "./about/AboutPage";
 import Header from "./common/Header";
 import HeaderLog from "./common/HeaderLog";
