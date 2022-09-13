@@ -6,21 +6,30 @@ import HomePage  from "./HomePage";
 function ManageHome({history,  ...props}) {
   
   const [show, setShow] = useState(false);
-  const [pages, setPages] = useState({"Registro": true, "Puntos":false, "History": "Registro"});
+  const [pages, setPages] = useState({"Registro": true, "Puntos":false, "Prodes": false, "History": "Registro"});
 
   useEffect(() => {
   }, []);
 
   const handleNext = () =>{
-    setPages({"Registro": false, "Puntos":true, "History": "Registro"});
+    if(pages.History === "Registro"){
+      setPages({"Registro": false, "Puntos":true, "Prodes": false, "History": "Puntos"});
+    }else if(pages.History === "Puntos"){
+      setPages({"Registro": false, "Puntos":false, "Prodes": true, "History": "Prodes"});
+    }  
   } 
 
   const handleBack = () =>{
-    setPages({"Registro": true, "Puntos":false, "History": "Puntos"});
+    if(pages.History === "Prodes"){
+      setPages({"Registro": false, "Puntos":true, "Prodes": false, "History": "Puntos"});
+    }else if(pages.History === "Puntos"){
+      setPages({"Registro": true, "Puntos":false, "Prodes": false, "History": "Registro"});
+    }   
   } 
 
   const handleClose = () =>{
-      setShow(false);
+    setPages({"Registro": true, "Puntos":false, "Prodes": false, "History": "Registro"});
+    setShow(false);
   } 
   const handleShow = () =>{
       setShow(true);

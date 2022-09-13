@@ -41,8 +41,13 @@ function LoginPage({userLogin, onLogin, history, ...props}) {
     return Object.keys(errors).length === 0;
   }
 
+  function closeAlert() {    
+    setErrors({});
+  }
+
   function handleSave(event){
     event.preventDefault();
+    setErrors({});
     if(!formIsValid()) return;
     setSaving(true);
     onLogin(user).then((data) => {
@@ -52,7 +57,8 @@ function LoginPage({userLogin, onLogin, history, ...props}) {
       history.push("/");
     }).catch(error => {
         setSaving(false);
-        setErrors({onSave: error.message});
+        setErrors({onLogin:JSON.parse(error.message).error});
+        toast.error(JSON.parse(error.message).error);
     });
   }
   return (
@@ -61,6 +67,7 @@ function LoginPage({userLogin, onLogin, history, ...props}) {
       errors={errors} 
       onChange={handleChange}
       onLogin={handleSave}
+      onCloseAlert={closeAlert}
       saving={saving}/>
   )
   

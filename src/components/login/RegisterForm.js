@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import TextInput from "../common/TextInput";
+import FormTextInput from "../common/FormTextInput";
+
 
 const RegisterForm = ({
   user,
@@ -12,7 +13,7 @@ const RegisterForm = ({
 }) => {
   return (
     <>
-    <button className="btn btn-outline-danger" onClick={() => onChangeCodeAuth(user)}>
+    <button className="btn btn-outline-warning" onClick={() => onChangeCodeAuth(user)}>
       Tengo Codigo!
     </button>
     <form onSubmit={onSave}>
@@ -22,28 +23,28 @@ const RegisterForm = ({
           {errors.onSave}
         </div>
       )}
-      <TextInput
+      <FormTextInput
         name="name"
         label="Nombre"
         value={user.name}
         onChange={onChange}
         error={errors.title}
       />
-      <TextInput
+      <FormTextInput
         name="email"
         label="Email"
         value={user.email}
         onChange={onChange}
         error={errors.title}
       />
-      <TextInput
+      <FormTextInput
         name="password"
         label="Password"
         value={user.password}
         onChange={onChange}
         error={errors.title}
       />
-      <TextInput
+      <FormTextInput
         name="codeAuth"
         value={user.codeAuth}
         label="Codigo Autorizacion"

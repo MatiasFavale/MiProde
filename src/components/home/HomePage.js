@@ -16,7 +16,7 @@ const HomePage = ({onShow,  onClose, onNext, onBack, pages,  show}) => (
         <Modal.Title className="labelFont">Reglas</Modal.Title>
       </Modal.Header>
       <Modal.Body className="fondoClass">
-        <div hidden={!pages.Registro}>
+      <div hidden={!pages.Registro}>
           <p className="labelFont">Registro</p>
           <p className="letraBlanca">Para registrarse debe introducir, Nombre, Email, Password y presionar Enviar.</p>
           <p className="letraBlanca">Llegar un codigo de autorizacion via mail para completar con el registro</p><br/>
@@ -28,6 +28,15 @@ const HomePage = ({onShow,  onClose, onNext, onBack, pages,  show}) => (
           <p className="letraBlanca">Por acierto exacto de resultado (Invalida el +3 anterior) <strong className="labelGreen">+5</strong></p>
           <p className="letraBlanca">Por cada gol del Jugador elegido                          <strong className="labelGreen">+5</strong></p>
           <p className="letraBlanca">Por acierto del equipo Campeon del Mundial Qatar 2022     <strong className="labelGreen">+50</strong></p><br/>
+          <Button  onClick={onBack} variant="secondary"><BsFillArrowLeftCircleFill /></Button> 
+            
+          <Button className="btnNext" onClick={onNext} variant="secondary"><BsFillArrowRightCircleFill /></Button>         
+        </div>
+        <div hidden={!pages.Prodes}>
+          <p className="labelFont">Carga de Prodes / Jugador / Campeon</p>
+          <p className="letraBlanca">La carga de los pronosticos de cada partido es hasta el dia anterior a jugarse hasta las 23:59 hs.</p>
+          <p className="letraBlanca">Para la elección del Jugador hay tiempo hasta el dia 19/11 23:59 hs.</p>
+          <p className="letraBlanca">Para la elección del Campeon hay tiempo hasta el dia 19/11 23:59 hs.</p>
           <Button  onClick={onBack} variant="secondary"><BsFillArrowLeftCircleFill /></Button>          
         </div>
       </Modal.Body>
