@@ -41,9 +41,9 @@ const App = ({ userLogin , actions}) => {
     <div className="container-fluid">   
     {userLogin.message === "Success" ? (
       userLogin.type === "admin" ? (
-        <HeaderAdmin userLogin={userLogin}/>        
+        <HeaderAdmin userLogin={this.props.userLogin}/>        
       ) : (
-        <HeaderLog userLogin={userLogin}/>
+        <HeaderLog userLogin={this.props.userLogin}/>
       )
     ) : (
       <Header />
