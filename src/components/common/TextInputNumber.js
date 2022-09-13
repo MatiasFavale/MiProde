@@ -19,6 +19,7 @@ const TextInputNumber = ({ name, label, onChange, placeholder, value,   error, d
           value={value}
           onChange={onChange}
           disabled = {disabled}
+          autocomplete="off"
         />
         {error && <div className="alert alert-danger">{error}</div>}
       </div>
