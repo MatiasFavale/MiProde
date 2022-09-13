@@ -50,7 +50,7 @@ const HeaderLog = () => {
             <div className="text-end">
               
               <NavLink className="btn btn-warning" to="/register" activeStyle={activeStyle}>
-                Sign Out
+                {userLogin.name} / Salir
               </NavLink>
             </div>
           </div>

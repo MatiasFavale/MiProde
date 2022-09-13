@@ -34,9 +34,9 @@ const HomePage = ({onShow,  onClose, onNext, onBack, pages,  show}) => (
         </div>
         <div hidden={!pages.Prodes}>
           <p className="labelFont">Carga de Prodes / Jugador / Campeon</p>
-          <p className="letraBlanca">La carga de los pronosticos de cada partido es hasta el dia anterior a jugarse hasta las 23:59 hs.</p>
-          <p className="letraBlanca">Para la elección del Jugador hay tiempo hasta el dia 19/11 23:59 hs.</p>
-          <p className="letraBlanca">Para la elección del Campeon hay tiempo hasta el dia 19/11 23:59 hs.</p>
+          <p className="letraBlanca">La carga de los pronosticos de cada partido es hasta el dia anterior a jugarse cada uno de ellos, hasta las 23:59 hs.</p>
+          <p className="letraBlanca">Para la elección del Jugador hay tiempo hasta el dia 19 de Noviembre, 23:59 hs.</p>
+          <p className="letraBlanca">Para la elección del Campeon hay tiempo hasta el dia 19 de Noviembre, 23:59 hs.</p>
           <Button  onClick={onBack} variant="secondary"><BsFillArrowLeftCircleFill /></Button>          
         </div>
       </Modal.Body>

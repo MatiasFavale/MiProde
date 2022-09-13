@@ -24,10 +24,10 @@ const Header = () => {
 
             <div className="text-end">
               <NavLink className="btn btn-outline-light me-2" to="/login" activeStyle={activeStyle}>
-                Login
+                Ingresar
               </NavLink>
               <NavLink className="btn btn-warning" to="/register" activeStyle={activeStyle}>
-                Sign up
+                Registrarse
               </NavLink>
             </div>
           </div>
