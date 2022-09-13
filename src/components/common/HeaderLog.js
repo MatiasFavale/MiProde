@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const HeaderLog = () => {
+const HeaderLog = (userLogin) => {
   const activeStyle = { color: "red" };
   return (
     
