@@ -53,7 +53,7 @@ function LoginPage({userLogin, onLogin, history, ...props}) {
     onLogin(user).then((data) => {
       debugger;
       console.log(data);
-      toast.success("User Success.");
+      toast.success("User Logueado.");
       history.push("/");
     }).catch(error => {
         setSaving(false);

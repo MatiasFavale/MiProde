@@ -54,7 +54,7 @@ class FixturePage extends React.Component {
     
     this.props.actions.savePrediction(this.props.userLogin, match, this.props.matches, this.props.predictions)
     .then(success=>{
-      toast.success("prediction saved");
+      toast.success("Pronostico cargado correctamente!");
     })
     .catch(error => {
       toast.error("Fallo el grabado, reintente. ", error.message, {autoClose: false});

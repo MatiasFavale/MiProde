@@ -53,7 +53,7 @@ function ManageTeamModal({teams, points, point={}, loadTeams, loadPoints, savePo
         .catch(error =>{
           alert("loading point failed " + error);
         });
-        toast.success("champion Success.");
+        toast.success("Su Campeon se cargo correctamente!");
     }).catch(error => {
         setSaving(false);
         setErrors({onSave: error.message});

@@ -39,9 +39,9 @@ function RegisterPage({userLogin, saveRegister, saveRegisterCode, history, ...pr
     const { name, email, password } = user;
     const errors = {};
 
-    if (!name) errors.name = "nombre is required.";
-    if (!email) errors.email = "email is required";
-    if (!password) errors.password = "password is required";
+    if (!name) errors.name = "nombre is requerido.";
+    if (!email) errors.email = "email is requerido";
+    if (!password) errors.password = "password is requerido";
 
     setErrors(errors);
     // Form is valid if the errors object still has no properties
@@ -56,7 +56,7 @@ function RegisterPage({userLogin, saveRegister, saveRegisterCode, history, ...pr
       saveRegisterCode(user).then((data) => {
         debugger;
         console.log(data);
-        toast.success("User Register and log.");
+        toast.success("User Registrado y logueado");
         history.push("/");
       }).catch(error => {
           setSaving(false);
