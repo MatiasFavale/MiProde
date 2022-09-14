@@ -8,7 +8,7 @@ import HeaderLog from "./common/HeaderLog";
 import HeaderAdmin from "./common/HeaderAdmin";
 import PageNotFound from "./PageNotFound";
 //import CoursesPage from "./courses/CoursesPage";
-import ManageCoursePage from "./courses/ManageCoursePage";
+//import ManageCoursePage from "./courses/ManageCoursePage";
 import ResultadosPage from "./resultados/ResultadosPage";
 import RegisterPage from "./login/RegisterPage";
 import { ToastContainer } from "react-toastify";
@@ -23,6 +23,7 @@ import ManageChampionModal from "./champion/ManageChampionModal";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as registerActions from "../redux/actions/login/registerActions";
+import './App.css';
 
 const App = ({ userLogin , actions}) => {
   
