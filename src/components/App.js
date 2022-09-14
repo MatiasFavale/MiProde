@@ -8,7 +8,7 @@ import HeaderLog from "./common/HeaderLog";
 import HeaderAdmin from "./common/HeaderAdmin";
 import PageNotFound from "./PageNotFound";
 //import CoursesPage from "./courses/CoursesPage";
-//import ManageCoursePage from "./courses/ManageCoursePage";
+import ManageCoursePage from "./courses/ManageCoursePage";
 import ResultadosPage from "./resultados/ResultadosPage";
 import RegisterPage from "./login/RegisterPage";
 import { ToastContainer } from "react-toastify";
@@ -23,25 +23,25 @@ import ManageChampionModal from "./champion/ManageChampionModal";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as registerActions from "../redux/actions/login/registerActions";
-import './App.css';
 
 const App = ({ userLogin , actions}) => {
   
   var sLocal = localStorage.getItem('userLogin');
   if(sLocal !== null){
+    console.log(userLogin);
     if(userLogin.message !== "Success"){
       if(new Date() <= new Date(JSON.parse(sLocal).expires)){
         actions.loadLoginLocalSt(JSON.parse(sLocal));
       }      
     }
   }
-   
+  
   debugger;
   return (
     <div className="container-fluid">   
     {userLogin.message === "Success" ? (
       userLogin.type === "admin" ? (
-        <HeaderAdmin />       
+        <HeaderAdmin />        
       ) : (
         <HeaderLog />
       )
