@@ -42,7 +42,7 @@ export function saveRegisterCode(register){
         dispatch(beginApiCall());
         return registerApi.postUserCode(register)
         .then(savedRegister => {
-            dispatch(loginUserSuccess(register));
+            dispatch(loginUserSuccess(savedRegister));
         })
         .catch(error => {
             dispatch(apiCallError(error));
