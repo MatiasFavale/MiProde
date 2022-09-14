@@ -27,7 +27,7 @@ export function saveRegister(register){
         dispatch(beginApiCall());
         return registerApi.postUser(register)
         .then(savedRegister => {
-            dispatch(createUserSuccess(savedRegister));
+            dispatch(createUserSuccess(register));
         })
         .catch(error => {
             dispatch(apiCallError(error));
