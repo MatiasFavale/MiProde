@@ -12,7 +12,7 @@ const HeaderLog = () => {
             
             <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
               <li>
-                <NavLink className="nav-link px-2" to="/" activeStyle={activeStyle} exact>
+                <NavLink className="nav-link px-2" to="/home" activeStyle={activeStyle} exact>
                   Home
                 </NavLink>
               </li>

@@ -57,7 +57,7 @@ function RegisterPage({userLogin, saveRegister, saveRegisterCode, history, ...pr
         debugger;
         console.log(data);
         toast.success("User Register and log.");
-        history.push("/");
+        history.push("/home");
       }).catch(error => {
           setSaving(false);
           setErrors({onSave: error.message});

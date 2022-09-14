@@ -51,6 +51,7 @@ const App = ({ userLogin , actions}) => {
     )}         
     <Switch>
       <Route exact path="/" component={HomePage} />
+      <Route exact path="/home" component={HomePage} />
       <Route path="/fixture" component={FixturePage} />
       <Route exact path="/player" component={ManagePlayerModal} />
       <Route exact path="/champion" component={ManageChampionModal} />
