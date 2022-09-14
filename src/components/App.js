@@ -41,7 +41,7 @@ const App = ({ userLogin , actions}) => {
     <div className="container-fluid">   
     {userLogin.message === "Success" ? (
       userLogin.type === "admin" ? (
-        <HeaderAdmin nameUser={JSON.parse(sLocal).name}/>        
+        <HeaderAdmin nameUser={userLogin.name}/>       
       ) : (
         <HeaderLog nameUser={JSON.parse(sLocal).name}/>
       )
