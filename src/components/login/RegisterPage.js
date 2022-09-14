@@ -39,9 +39,9 @@ function RegisterPage({userLogin, saveRegister, saveRegisterCode, history, ...pr
     const { name, email, password } = user;
     const errors = {};
 
-    if (!name) errors.name = "nombre is requerido.";
-    if (!email) errors.email = "email is requerido";
-    if (!password) errors.password = "password is requerido";
+    if (!name) errors.name = "nombre is required.";
+    if (!email) errors.email = "email is required";
+    if (!password) errors.password = "password is required";
 
     setErrors(errors);
     // Form is valid if the errors object still has no properties
@@ -56,7 +56,7 @@ function RegisterPage({userLogin, saveRegister, saveRegisterCode, history, ...pr
       saveRegisterCode(user).then((data) => {
         debugger;
         console.log(data);
-        toast.success("User Registrado y logueado");
+        toast.success("User Register and log.");
         history.push("/");
       }).catch(error => {
           setSaving(false);
@@ -108,15 +108,15 @@ export function getUserBySlug(register, slug){
 
 function mapStateToProps(state, ownProps){
   const slug = ownProps.match.params.slug;
+  debugger;
   var oUser = {email: "", password:"",name:"", codeAuth:"", habilitado:false};
   if(state.userLogin.email !== undefined){
     oUser.email = state.userLogin.email;
     oUser.password = state.userLogin.password;
     oUser.name = state.userLogin.name;
   }
-  
   return {
-    user:oUser,
+    user: oUser,
     userLogin:state.userLogin,
     register: state.register
   };
