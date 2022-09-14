@@ -56,7 +56,7 @@ function RegisterPage({userLogin, saveRegister, saveRegisterCode, history, ...pr
       saveRegisterCode(user).then((data) => {
         debugger;
         console.log(data);
-        toast.success("User Register and log.");
+        toast.success("Usuario registrado y logueado correctamente.");
         history.push("/");
       }).catch(error => {
           setSaving(false);
