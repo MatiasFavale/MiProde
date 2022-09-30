@@ -17,12 +17,15 @@ class RankingsPage extends React.Component {
     endState:10
   };
   componentDidMount(){
-    const {rankings,  actions,  userLogin} = this.props;
-        
+    const {rankings,  actions,  userLogin, history} = this.props;
+    if(userLogin.message === "Success"){
       actions.loadRankings(userLogin)
       .catch(error =>{
         alert("loading ranks failed " + error);
       });  
+    }else{
+      history.push("/");
+    }
   }
 
   onNext = () => {
@@ -75,7 +78,8 @@ class RankingsPage extends React.Component {
 RankingsPage.propTypes = {
   rankings: PropTypes.array.isRequired,
   actions: PropTypes.object.isRequired,  
-  loading: PropTypes.bool.isRequired
+  loading: PropTypes.bool.isRequired,
+  history: PropTypes.object.isRequired
 };
 
 //Seccion Redux

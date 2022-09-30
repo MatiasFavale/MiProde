@@ -18,7 +18,9 @@ class FixturePage extends React.Component {
     errors:{}
   };
   componentDidMount(){
-    const {matches, teams, predictions, actions, userLogin, activeItem, activegroup} = this.props;
+    const {matches, teams, predictions, actions, userLogin, activeItem, activegroup, history} = this.props;
+
+    if(userLogin.message === "Success"){
     //if(matches.length === 0){
       actions.loadMatches(userLogin, "GRU")
       .catch(error =>{
@@ -41,6 +43,9 @@ class FixturePage extends React.Component {
         alert("loading prediction failed " + error);
       });
     //}   
+    }else{
+      history.push("/");
+    }  
   }
 
 
@@ -134,7 +139,8 @@ FixturePage.propTypes = {
   predictions: PropTypes.array.isRequired,
   actions: PropTypes.object.isRequired,  
   loading: PropTypes.bool.isRequired,
-  activegroup: PropTypes.object.isRequired
+  activegroup: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired
 };
 
 //Seccion Redux

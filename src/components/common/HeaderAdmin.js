@@ -1,7 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import Button from 'react-bootstrap/Button';
 
-const HeaderAdmin = () => {
+const HeaderAdmin = ({onLogOut, userlog}) => {
   const activeStyle = { color: "red" };
   return (
     
@@ -59,10 +60,12 @@ const HeaderAdmin = () => {
 
 
             <div className="text-end">
-              
-              <NavLink className="btn btn-warning" to="/register" activeStyle={activeStyle}>
+              <Button onClick={onLogOut} className="btn btn-warning" to="/" activestyle={activeStyle}>
                 Salir
-              </NavLink>
+              </Button>
+            </div>
+            <div className="userLogin">
+              &nbsp;&nbsp;{userlog.name}
             </div>
           </div>
         </div>

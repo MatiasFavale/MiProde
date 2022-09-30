@@ -10,6 +10,9 @@ export default function loginReducer(state = initialState.userLogin, action){
             return action.userLogin;
         case types.LOAD_LOGIN_LOCALST_SUCCESS:
             return action.userLogin;
+        case types.LOAD_LOGOUT_LOCALST_SUCCESS:
+            debugger;
+            return action.userLogin;
         default:
             return state;
     }

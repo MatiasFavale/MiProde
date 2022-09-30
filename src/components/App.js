@@ -24,9 +24,11 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as registerActions from "../redux/actions/login/registerActions";
 import './App.css';
+import PropTypes from "prop-types";
+import { useHistory } from "react-router-dom";
 
 const App = ({ userLogin , actions}) => {
-  
+  const history = useHistory();
   var sLocal = localStorage.getItem('userLogin');
   if(sLocal !== null){
     console.log(userLogin);
@@ -36,15 +38,23 @@ const App = ({ userLogin , actions}) => {
       }      
     }
   }
+
+  function onLogOut(event){
+    event.preventDefault();
+    debugger;
+    localStorage.removeItem('userLogin')
+    actions.loadLogoutLocalSt();
+    history.push("/");
+  }
   
   debugger;
   return (
     <div className="container-fluid">   
     {userLogin.message === "Success" ? (
       userLogin.type === "admin" ? (
-        <HeaderAdmin />        
+        <HeaderAdmin onLogOut={onLogOut} userlog={userLogin}/>        
       ) : (
-        <HeaderLog />
+        <HeaderLog onLogOut={onLogOut} userlog={userLogin}/>
       )
     ) : (
       <Header />
@@ -111,7 +121,8 @@ function mapStateToProps(state){
 function mapDispatchToProps(dispatch){
   return {
     actions: {
-      loadLoginLocalSt: bindActionCreators(registerActions.loadLoginLocalSt, dispatch)
+      loadLoginLocalSt: bindActionCreators(registerActions.loadLoginLocalSt, dispatch),
+      loadLogoutLocalSt: bindActionCreators(registerActions.loadLogoutLocalSt, dispatch)
     }
   };
 }

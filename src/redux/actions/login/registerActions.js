@@ -21,6 +21,11 @@ export function loadLoginLocalStSuccess(userLogin){
     return {type: types.LOAD_LOGIN_LOCALST_SUCCESS, userLogin};
 }
 
+export function loadLogoutLocalStSuccess(){
+    var userLogin = {};
+    return {type: types.LOAD_LOGOUT_LOCALST_SUCCESS, userLogin};
+}
+
 export function saveRegister(register){
     return function(dispatch, getState){
         debugger;
@@ -71,5 +76,12 @@ export function loadLoginLocalSt ( user ){
     return function(dispatch, getState){
         debugger;
         dispatch(loadLoginLocalStSuccess(user));
+    }
+}
+
+export function loadLogoutLocalSt (  ){
+    return function(dispatch, getState){
+        debugger;
+        dispatch(loadLogoutLocalStSuccess());
     }
 }

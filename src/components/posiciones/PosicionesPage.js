@@ -15,12 +15,15 @@ class PosicionesPage extends React.Component {
     errors:{}
   };
   componentDidMount(){
-    const {posicionesteams, actions,  userLogin} = this.props;
-        
+    const {posicionesteams, actions,  userLogin, history} = this.props;
+    if(userLogin.message === "Success"){
       actions.loadPosicionesTeams(userLogin)
       .catch(error =>{
         alert("loading teams failed " + error);
       });  
+    }else{
+      history.push("/");
+    }  
   }
 
   render() {
@@ -59,7 +62,8 @@ class PosicionesPage extends React.Component {
 PosicionesPage.propTypes = {
   posicionesteams: PropTypes.object.isRequired,
   actions: PropTypes.object.isRequired,  
-  loading: PropTypes.bool.isRequired
+  loading: PropTypes.bool.isRequired,
+  history: PropTypes.object.isRequired
 };
 
 //Seccion Redux

@@ -14,21 +14,25 @@ function ManageTeamModal({teams, points, point={}, loadTeams, loadPoints, savePo
   const [saving, setSaving] = useState(false);
 
   useEffect(() => {
-    if(teams.length === 0){
-      loadTeams(userLogin)
-      .catch(error =>{
-        alert("loading champion failed " + error);
-      });
+    if(userLogin.message === "Success"){
+      if(teams.length === 0){
+        loadTeams(userLogin)
+        .catch(error =>{
+          alert("loading champion failed " + error);
+        });
+      }else{
+        setChampion({ ...props.champion});
+      }
+      
+      if(points.length === 0){
+        loadPoints(userLogin)
+        .catch(error =>{
+          alert("loading point failed " + error);
+        });
+      }
     }else{
-      setChampion({ ...props.champion});
-    }
-    
-    if(points.length === 0){
-      loadPoints(userLogin)
-      .catch(error =>{
-        alert("loading point failed " + error);
-      });
-    }
+      history.push("/");
+    }  
       
   }, [props.champion]);
 
