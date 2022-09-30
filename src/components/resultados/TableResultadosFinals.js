@@ -16,7 +16,7 @@ const TableFixtureFinals = ({matches ,  errors = {}, onChange, onSaveClick, onDi
                 <th></th>
                 <th>EquipoV</th>
                 <th>Grabar</th>
-                <th>Deshabilitar</th>
+                <th>Desh</th>
                 <th>Grabar Pts.</th>
               </tr>
             </thead>

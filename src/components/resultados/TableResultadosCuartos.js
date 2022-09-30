@@ -16,7 +16,7 @@ const TableFixtureCuartos = ({matches ,  errors = {}, onChange, onSaveClick, onD
                 <th></th>
                 <th>EquipoV</th>
                 <th>Grabar</th>
-                <th>Deshabilitar</th>
+                <th>Desh</th>
                 <th>Grabar Pts.</th>
               </tr>
             </thead>

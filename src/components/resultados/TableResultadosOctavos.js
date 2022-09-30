@@ -16,7 +16,7 @@ const TableResultadosOctavos = ({matches ,  errors = {}, onChange, onSaveClick, 
                 <th></th>
                 <th>EquipoV</th>
                 <th>Grabar</th>
-                <th>Deshabilitar</th>
+                <th>Desh</th>
                 <th>Grabar Pts.</th>
               </tr>
             </thead>

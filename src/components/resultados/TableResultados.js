@@ -16,7 +16,7 @@ const TableResultados = ({ matches ,  errors = {}, onChange, onSaveClick, onDisa
                 <th></th>
                 <th>EquipoV</th>
                 <th>Grabar</th>
-                <th>Deshabilitar</th>
+                <th>Desh</th>
                 <th>Grabar Pts.</th>
               </tr>
             </thead>
