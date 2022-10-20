@@ -203,7 +203,7 @@ function mapStateToProps(state){
             if(sPrediccionTeamOne > sPrediccionTeamTwo && sGolOne > sGolTwo){
               sResultProde = "+3";
             }
-            if(sPrediccionTeamOne > sPrediccionTeamTwo && sGolOne > sGolTwo){
+            if(sPrediccionTeamOne < sPrediccionTeamTwo && sGolOne < sGolTwo){
               sResultProde = "+3";
             }
             if(sPrediccionTeamOne.toString() === sGolOne.toString() && sPrediccionTeamTwo.toString() === sGolTwo.toString()){
