@@ -45,7 +45,7 @@ const TableResultadosOctavos = ({matches ,  errors = {}, onChange, onSaveClick, 
                       <td>{match.Fecha}</td>            
                       <td>
                         <div className="imageEquipo">
-                          <img className="imgFlag" src={"src/img/" + match.teamOne + ".svg"}></img> 
+                          <img className={"imgFlag" + " imgFlag" + match.teamOne} ></img>
                           <br></br>
                           <span>{match.EquipoL}</span>
                         </div>
@@ -72,7 +72,7 @@ const TableResultadosOctavos = ({matches ,  errors = {}, onChange, onSaveClick, 
                       </td>
                       <td>
                         <div className="imageEquipo">
-                        <img className="imgFlag" src={"src/img/" + match.teamTwo + ".svg"}></img>    
+                          <img className={"imgFlag" + " imgFlag" + match.teamTwo} ></img> 
                           <br></br>
                           <span>{match.EquipoV}</span>
                         </div>
