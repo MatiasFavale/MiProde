@@ -17,7 +17,6 @@ const TableFixture = ({matches = [],  errors = {}, onChange, onSaveClick, active
                     <th></th>
                     <th></th>
                     <th></th>
-                    <th>Estadio</th>
                     <th></th>
                 </tr>
             </thead>
@@ -68,12 +67,11 @@ const TableFixture = ({matches = [],  errors = {}, onChange, onSaveClick, active
                             </div>
                             </td>
             
-                            <td>{match.stadium}</td>
                             <td>
                             {
                             match.habilitado === true 
                             ? <Button onClick={() => onSaveClick(match)} variant="primary"><BiSave /></Button>
-                            : <></>
+                            : <span><strong className="labelGreen">{match.ResultProde}</strong></span> 
                             }              
                             </td>
                             

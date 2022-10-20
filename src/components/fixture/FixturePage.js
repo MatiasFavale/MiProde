@@ -193,7 +193,22 @@ function mapStateToProps(state){
           sGolTwo = "";
         }else{
           sGolOne = match.goalsTeamOne;
-          sGolTwo = match.goalsTeamTwo;          
+          sGolTwo = match.goalsTeamTwo;  
+          
+          if(sGolOne !== "" && sGolTwo !== ""){
+            if(sPrediccionTeamOne === sPrediccionTeamTwo && sGolOne === sGolTwo){
+              sResultProde = "+3";
+            }
+            if(sPrediccionTeamOne > sPrediccionTeamTwo && sGolOne > sGolTwo){
+              sResultProde = "+3";
+            }
+            if(sPrediccionTeamOne > sPrediccionTeamTwo && sGolOne > sGolTwo){
+              sResultProde = "+3";
+            }
+            if(sPrediccionTeamOne.toString() === sGolOne.toString() && sPrediccionTeamTwo.toString() === sGolTwo.toString()){
+              sResultProde = "+5";
+            }
+          } 
         }
       return {        
         ...match,
@@ -206,7 +221,8 @@ function mapStateToProps(state){
         nameInpL: "prediccionL_" + match.code ,
         nameInpV: "prediccionV_" + match.code ,
         Group: sFase,
-        Fecha: match.date + " " + match.time
+        Fecha: match.date + " " + match.time,
+        ResultProde: sResultProde
       };
     }),
     teams: state.teams,

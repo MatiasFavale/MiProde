@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
+import { BiPowerOff } from "react-icons/bi";
 
 const HeaderAdmin = ({onLogOut, userlog}) => {
   const activeStyle = { color: "red" };
@@ -24,12 +25,12 @@ const HeaderAdmin = ({onLogOut, userlog}) => {
               </li>
               <li>
               <NavLink className="nav-link px-2" to="/player" activeStyle={activeStyle}>
-                Jugadores
+                MiJugador
               </NavLink>
               </li>
               <li>
               <NavLink className="nav-link px-2" to="/champion" activeStyle={activeStyle}>
-                Campeon
+                MiCampeon
               </NavLink>
               </li>
               <li>
@@ -61,7 +62,7 @@ const HeaderAdmin = ({onLogOut, userlog}) => {
 
             <div className="text-end">
               <Button onClick={onLogOut} className="btn btn-warning" to="/" activestyle={activeStyle}>
-                Salir
+                <BiPowerOff />
               </Button>
             </div>
             <div className="userLogin">
