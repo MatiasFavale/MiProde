@@ -188,6 +188,7 @@ function mapStateToProps(state){
         }
         var sGolOne="";
         var sGolTwo = "";
+        var sResultProde = "";
         if(match.winner === ""){
           sGolOne = "";
           sGolTwo = "";
