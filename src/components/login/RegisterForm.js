@@ -28,21 +28,21 @@ const RegisterForm = ({
         label="Nombre"
         value={user.name}
         onChange={onChange}
-        error={errors.title}
+        error={errors.name}
       />
       <FormTextInput
         name="email"
         label="Email"
         value={user.email}
         onChange={onChange}
-        error={errors.title}
+        error={errors.email}
       />
       <FormTextInput
         name="password"
         label="Password"
         value={user.password}
         onChange={onChange}
-        error={errors.title}
+        error={errors.password}
       />
       <FormTextInput
         name="codeAuth"

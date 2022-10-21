@@ -7,21 +7,22 @@ export default function posicionesReducer(state = initialState.posicionesteams, 
             
             var objectGroups = {
                 "GrupoA": action.posicionesteams.filter(nfilter=>nfilter.group === "A")
-                    .sort((a, b) => a.points > b.points ? -1 : 1).sort((a, b) => +b.difference-a.difference),
+                .sort((a, b) => +b.difference-a.difference).sort((a, b) => a.points > b.points ? -1 : 1),
                 "GrupoB": action.posicionesteams.filter(nfilter=>nfilter.group === "B")
-                    .sort((a, b) => a.points > b.points ? -1 : 1).sort((a, b) => +b.difference-a.difference),
+                .sort((a, b) => +b.difference-a.difference).sort((a, b) => a.points > b.points ? -1 : 1),
                 "GrupoC": action.posicionesteams.filter(nfilter=>nfilter.group === "C")
-                    .sort((a, b) => a.points > b.points ? -1 : 1).sort((a, b) => +b.difference-a.difference),
+                .sort((a, b) => +b.difference-a.difference).sort((a, b) => a.points > b.points ? -1 : 1),
                 "GrupoD": action.posicionesteams.filter(nfilter=>nfilter.group === "D")
-                    .sort((a, b) => a.points > b.points ? -1 : 1).sort((a, b) => +b.difference-a.difference),
+                .sort((a, b) => +b.difference-a.difference).sort((a, b) => a.points > b.points ? -1 : 1),
+                 //   .sort((a, b) => a.points > b.points ? -1 : 1).sort((a, b) => +b.difference-a.difference),
                 "GrupoE": action.posicionesteams.filter(nfilter=>nfilter.group === "E")
-                    .sort((a, b) => a.points > b.points ? -1 : 1).sort((a, b) => +b.difference-a.difference),
+                .sort((a, b) => +b.difference-a.difference).sort((a, b) => a.points > b.points ? -1 : 1),
                 "GrupoF": action.posicionesteams.filter(nfilter=>nfilter.group === "F")
-                    .sort((a, b) => a.points > b.points ? -1 : 1).sort((a, b) => +b.difference-a.difference),
+                .sort((a, b) => +b.difference-a.difference).sort((a, b) => a.points > b.points ? -1 : 1),
                 "GrupoG": action.posicionesteams.filter(nfilter=>nfilter.group === "G")
-                    .sort((a, b) => a.points > b.points ? -1 : 1).sort((a, b) => +b.difference-a.difference),
+                .sort((a, b) => +b.difference-a.difference).sort((a, b) => a.points > b.points ? -1 : 1),
                 "GrupoH": action.posicionesteams.filter(nfilter=>nfilter.group === "H")
-                    .sort((a, b) => a.points > b.points ? -1 : 1).sort((a, b) => +b.difference-a.difference)
+                .sort((a, b) => +b.difference-a.difference).sort((a, b) => a.points > b.points ? -1 : 1)
             }
             debugger;
             action.posicionesteams = objectGroups;

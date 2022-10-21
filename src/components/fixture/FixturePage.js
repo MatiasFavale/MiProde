@@ -51,27 +51,34 @@ class FixturePage extends React.Component {
 
   handleItemChanged = (match, event) => {
     debugger;
-    match[event.target.name] = event.target.value;
-    this.props.actions.changeMatch(match,this.props.matches, this.props.predictions);
+    if(Number(event.target.value) < 0){
+      console.log("Solo Positivo");
+    }else{
+      match[event.target.name] = event.target.value;
+      this.props.actions.changeMatch(match,this.props.matches, this.props.predictions);
+    }
   }
 
   handleSavePrediction = match => {
-    
-    this.props.actions.savePrediction(this.props.userLogin, match, this.props.matches, this.props.predictions)
-    .then(success=>{
-      toast.success("Pronostico cargado correctamente!");
-    })
-    .catch(error => {
-      toast.error("Fallo el grabado, reintente. ", error.message, {autoClose: false});
-      this.props.actions.loadMatches(this.props.userLogin, "GRU")
-      .catch(error =>{
-        alert("loading matches failed " + error);
+    if(match.PrediccionTeamOne === "" || match.PrediccionTeamTwo === ""){
+      toast.error("Debe Cargar un resultado para grabar");
+    }else{
+      this.props.actions.savePrediction(this.props.userLogin, match, this.props.matches, this.props.predictions)
+      .then(success=>{
+        toast.success("Pronostico cargado correctamente!");
+      })
+      .catch(error => {
+        toast.error("Fallo el grabado, reintente. ", error.message, {autoClose: false});
+        this.props.actions.loadMatches(this.props.userLogin, "GRU")
+        .catch(error =>{
+          alert("loading matches failed " + error);
+        });
+        this.props.actions.loadPrediction(this.props.userLogin)
+        .catch(error =>{
+          alert("loading prediction failed " + error);
+        });
       });
-      this.props.actions.loadPrediction(this.props.userLogin)
-      .catch(error =>{
-        alert("loading prediction failed " + error);
-      });
-    });
+    }
   }
 
   onCLickChange = (fase,event) =>{
@@ -196,7 +203,7 @@ function mapStateToProps(state){
           sGolOne = match.goalsTeamOne;
           sGolTwo = match.goalsTeamTwo;  
           
-          if(sGolOne !== "" && sGolTwo !== ""){
+          if(sGolOne !== "" && sGolTwo !== "" && sPrediccionTeamOne !== "" && sPrediccionTeamTwo !== ""){
             if(sPrediccionTeamOne === sPrediccionTeamTwo && sGolOne === sGolTwo){
               sResultProde = "+3";
             }

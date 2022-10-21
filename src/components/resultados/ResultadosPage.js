@@ -36,11 +36,16 @@ class ResultadosPage extends React.Component {
       });
     }  
   }
+
   handleItemChanged = (match, event) => {
     debugger;
-    match[event.target.name] = event.target.value;
-    match.winner = "PPP";
-    this.props.actions.changeMatch(match,this.props.matches);
+    if(Number(event.target.value) < 0){
+      console.log("Solo Positivo");
+    }else{
+      match[event.target.name] = event.target.value;
+      match.winner = "PPP";
+      this.props.actions.changeMatch(match,this.props.matches);
+    }    
   }
 
   handleSaveResultados = match => {
