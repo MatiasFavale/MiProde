@@ -8,6 +8,7 @@ import TableFixture from "./TableFixture";
 import TableFixtureOctavos from "./TableFixtureOctavos";
 import TableFixtureCuartos from "./TableFixtureCuartos";
 import TableFixtureFinals from "./TableFixtureFinals";
+import Alerts from "../common/Alerts";
 
 
 const FixtrueList = ({ matches ,  errors = {}, onChange, onSaveClick, activeItem={}}) => (
@@ -94,6 +95,7 @@ const FixtrueList = ({ matches ,  errors = {}, onChange, onSaveClick, activeItem
         <div className="titleTable">
           <p>Octavos</p>
         </div>  
+        <Alerts />
         <br></br>
         <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
           <br></br>
@@ -116,6 +118,7 @@ const FixtrueList = ({ matches ,  errors = {}, onChange, onSaveClick, activeItem
         <div className="titleTable">
           <p>Cuartos</p>
         </div>  
+        <Alerts />
         <br></br>
         <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
           <br></br>
@@ -138,6 +141,7 @@ const FixtrueList = ({ matches ,  errors = {}, onChange, onSaveClick, activeItem
         <div className="titleTable">
           <p>Semifinales</p>
         </div>  
+        <Alerts />
         <br></br>
         <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
           <br></br>
@@ -160,6 +164,7 @@ const FixtrueList = ({ matches ,  errors = {}, onChange, onSaveClick, activeItem
         <div className="titleTable">
           <p>3er Puesto</p>
         </div>  
+        <Alerts />
         <br></br>
         <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <br></br>
@@ -175,6 +180,7 @@ const FixtrueList = ({ matches ,  errors = {}, onChange, onSaveClick, activeItem
         <div className="titleTable">
           <p>FINAL</p>
         </div>  
+        <Alerts />
         <br></br>
         <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <br></br>
