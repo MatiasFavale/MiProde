@@ -10,7 +10,7 @@ const TablePosiciones = ({posicionesteamsGrupos ,  errors = {}}) => {
         <table hidden={false} className="table table-striped table-bordered table-hover table-dark">
             <thead>
                 <tr>
-                <th>Equipo</th>
+                <th className="thPosiciones">Equipo</th>
                 <th>Puntos</th>
                 <th>GF</th>
                 <th>GC</th>
