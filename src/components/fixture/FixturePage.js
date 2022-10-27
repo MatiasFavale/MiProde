@@ -50,7 +50,7 @@ class FixturePage extends React.Component {
 
 
   handleItemChanged = (match, event) => {
-    debugger;
+    
     if(Number(event.target.value) < 0){
       console.log("Solo Positivo");
     }else{
@@ -152,11 +152,7 @@ FixturePage.propTypes = {
 
 //Seccion Redux
 function mapStateToProps(state){
-  debugger;
-  console.log(state.teams);
-  console.log(state.matches);
-  console.log("state.predictions");
-  console.log(state.predictions);
+  
   return {    
     matches: 
       state.teams.length === 0 ? [] : state.matches.map(match => {

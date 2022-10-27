@@ -31,7 +31,6 @@ const App = ({ userLogin , actions}) => {
   const history = useHistory();
   var sLocal = localStorage.getItem('userLogin');
   if(sLocal !== null){
-    console.log(userLogin);
     if(userLogin.message !== "Success"){
       if(new Date() <= new Date(JSON.parse(sLocal).expires)){
         actions.loadLoginLocalSt(JSON.parse(sLocal));
@@ -41,13 +40,13 @@ const App = ({ userLogin , actions}) => {
 
   function onLogOut(event){
     event.preventDefault();
-    debugger;
+    
     localStorage.removeItem('userLogin')
     actions.loadLogoutLocalSt();
     history.push("/");
   }
   
-  debugger;
+  
   return (
     <div className="container-fluid">   
     {userLogin.message === "Success" ? (
@@ -86,7 +85,6 @@ const App = ({ userLogin , actions}) => {
 function App(userLogin) {
   useEffect(() => {
     if(userLogin.length > 0){
-        console.log(userLogin);
     }
   }, []);
   return (

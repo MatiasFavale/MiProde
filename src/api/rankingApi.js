@@ -11,7 +11,6 @@ export function getRanking(userLogin) {
         headers: myHeaders,
         redirect: 'follow'
     };
-    console.log(baseUrl);
     return fetch(baseUrl, requestOptions)
         //.then(response => response.text())
         .then(handleResponse)

@@ -84,7 +84,6 @@ RankingsPage.propTypes = {
 
 //Seccion Redux
 function mapStateToProps(state){
-  debugger;
   return { 
     rankings: state.rankings,
     userLogin:state.userLogin,

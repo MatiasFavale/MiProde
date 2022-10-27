@@ -38,7 +38,7 @@ class ResultadosPage extends React.Component {
   }
 
   handleItemChanged = (match, event) => {
-    debugger;
+    
     if(Number(event.target.value) < 0){
       console.log("Solo Positivo");
     }else{
@@ -148,7 +148,7 @@ ResultadosPage.propTypes = {
 
 //Seccion Redux
 function mapStateToProps(state){
-  debugger;
+  
   return {    
     matches: 
       state.teams.length === 0 ? [] : state.matches.map(match => {

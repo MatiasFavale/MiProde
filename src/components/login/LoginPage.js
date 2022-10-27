@@ -13,16 +13,14 @@ function LoginPage({userLogin, onLogin, history, ...props}) {
 
   useEffect(() => {
     if(userLogin.message === "Success"){
-      debugger;
       localStorage.setItem('userLogin', JSON.stringify(userLogin));
-      console.log(userLogin);
     }else{
       setUser({...props.user});
     }
   }, [props.user]);
 
   function handleChange(event){
-    debugger;
+    
     const {name, value} = event.target;
     setUser(prevRegister => ({
         ...prevRegister,
@@ -51,8 +49,7 @@ function LoginPage({userLogin, onLogin, history, ...props}) {
     if(!formIsValid()) return;
     setSaving(true);
     onLogin(user).then((data) => {
-      debugger;
-      console.log(data);
+      
       toast.success("User Logueado.");
       history.push("/");
     }).catch(error => {

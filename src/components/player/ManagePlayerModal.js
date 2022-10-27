@@ -48,7 +48,6 @@ function ManagePlayerModal({players, points,point={}, loadPlayers,loadPoints, sa
     setShow(false);
     setSaving(true);
     var oContext = this;
-    debugger;
     savePoint(userLogin,player,true).then(() => {      
         loadPoints(userLogin)
         .catch(error =>{
@@ -106,9 +105,7 @@ ManagePlayerModal.propTypes = {
 
 function mapStateToProps(state, ownProps){
   //const slug = ownProps.player.params.slug;  
-  debugger;
   var oPoint = {};
-  console.log(state.players);
   if(state.points.length > 0){
     const aPoint = [...state.points, {...[0], playerSelect:state.points[0].playerSelect}]
     oPoint = aPoint[1];

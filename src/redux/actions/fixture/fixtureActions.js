@@ -38,12 +38,12 @@ export function loadMatches(userLogin, sFase){
 }
 
 export function changeMatch(match, matches, predictions){
-    debugger;
+    
     matches.filter(nfilter=>nfilter.code === match.code)[0].PrediccionTeamOne = match.PrediccionTeamOne;
     matches.filter(nfilter=>nfilter.code === match.code)[0].PrediccionTeamTwo = match.PrediccionTeamTwo;
     matches.filter(nfilter=>nfilter.code === match.code)[0].change = "1";
     return function(dispatch, getState){
-        debugger;
+        
         dispatch(changeMatchPrediction(matches, predictions));
     }
 }
@@ -51,14 +51,14 @@ export function changeMatch(match, matches, predictions){
 export function changeResultMatch(match, matches){
     matches.filter(nfilter=>nfilter.code === match.code)[0].change = "1";
     return function(dispatch, getState){
-        debugger;
+        
         dispatch(changeResultsMatch(matches));
     }
 }
 
 export function changeGroup(activegroup){
     return function(dispatch, getState){
-        debugger;
+        
         dispatch(changeActiveGroup(activegroup));
     }
 }

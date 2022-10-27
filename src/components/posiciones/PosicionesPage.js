@@ -68,7 +68,6 @@ PosicionesPage.propTypes = {
 
 //Seccion Redux
 function mapStateToProps(state){
-  debugger;
   return { 
     posicionesteams: state.posicionesteams,
     userLogin:state.userLogin,

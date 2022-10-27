@@ -13,9 +13,8 @@ function RegisterPage({userLogin, saveRegister, saveRegisterCode, history, ...pr
 
   useEffect(() => {
     if(userLogin.message === "Success"){
-      debugger;
+      
       localStorage.setItem('userLogin', JSON.stringify(userLogin));
-      console.log(userLogin);
     }else{
       setUser({...props.user});
     }
@@ -68,8 +67,6 @@ function RegisterPage({userLogin, saveRegister, saveRegisterCode, history, ...pr
     setSaving(true);
     if(user.habilitado){
       saveRegisterCode(user).then((data) => {
-        debugger;
-        console.log(data);
         toast.success("Usuario registrado y logueado correctamente.");
         history.push("/");
       }).catch(error => {
@@ -79,8 +76,6 @@ function RegisterPage({userLogin, saveRegister, saveRegisterCode, history, ...pr
       });
     }else{
       saveRegister(user).then((data) => {
-        debugger;
-        console.log(data);
         setSaving(false);
         toast.success("Debe introducir el codigo enviado al mail");
         setUser(prevRegister => ({
@@ -88,7 +83,6 @@ function RegisterPage({userLogin, saveRegister, saveRegisterCode, history, ...pr
           habilitado: true
         })) 
       }).catch(error => {
-          console.log(error);
           setSaving(false);
           setErrors({onSave: error.message});
           toast.error(error.message);
@@ -122,7 +116,7 @@ export function getUserBySlug(register, slug){
 
 function mapStateToProps(state, ownProps){
   const slug = ownProps.match.params.slug;
-  debugger;
+  
   var oUser = {email: "", password:"",name:"", codeAuth:"", habilitado:false};
   if(state.userLogin.email !== undefined){
     oUser.email = state.userLogin.email;

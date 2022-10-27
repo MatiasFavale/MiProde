@@ -4,12 +4,12 @@ import { func } from "prop-types";
 import { beginApiCall, apiCallError } from "../apiStatusActions";
 
 export function CreateResultadosSuccess(matches){
-    debugger;
+    
     return {type: types.CREATE_RESULTADOS_SUCCESS, matches};
 }
 
 export function MatchDisabledSuccess(matches){
-    debugger;
+    
     return {type: types.MATCH_DISABLED_SUCCESS, matches};
 }
 
@@ -18,7 +18,7 @@ export function saveResultados(user, match, matches){
         dispatch(beginApiCall());
         return resultadosApi.saveResultados(user,match)
         .then(savedResultados => {
-            debugger;
+            
             dispatch(CreateResultadosSuccess(matches));
         })
         .catch(error => {
@@ -33,7 +33,7 @@ export function saveDisabledMatch(user, match, matches){
         dispatch(beginApiCall());
         return resultadosApi.saveDisabledMatch(user,match)
         .then(savedResultados => {
-            debugger;
+            
             dispatch(MatchDisabledSuccess(matches));
         })
         .catch(error => {

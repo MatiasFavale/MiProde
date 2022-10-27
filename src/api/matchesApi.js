@@ -13,7 +13,6 @@ export function getMatches(userLogin, sFase) {
         headers: myHeaders,
         redirect: 'follow'
     };
-    console.log(baseUrl);
     return fetch(baseUrl + sQuery, requestOptions)
         //.then(response => response.text())
         .then(handleResponse)
@@ -29,7 +28,6 @@ export function getProdes(userLogin) {
         headers: myHeaders,
         redirect: 'follow'
     };
-    console.log(baseUrlProde);
     return fetch(baseUrlProde, requestOptions)
         //.then(response => response.text())
         .then(handleResponse)
@@ -37,7 +35,7 @@ export function getProdes(userLogin) {
 }
 
 export function savePrediction(userLogin, prediction) {
-    debugger;
+    
     const predictionData = {
         match:prediction.code, 
         teamOne: prediction.teamOne,
@@ -60,7 +58,7 @@ export function savePrediction(userLogin, prediction) {
   }
 
   export function saveResultados(userLogin, match) {
-    debugger;
+    
     const resultsData = {
         code: match.code,
         teamOne: match.teamOne,
@@ -84,7 +82,7 @@ export function savePrediction(userLogin, prediction) {
   }
 
   export function saveDisabledMatch(userLogin, match) {
-    debugger;
+    
     const resultsData = {
         code: match.code,
         habilitado: false,
@@ -99,7 +97,7 @@ export function savePrediction(userLogin, prediction) {
         redirect: 'follow',
         body: JSON.stringify(resultsData)
     };    
-    debugger;
+    
     
     return fetch(baseUrl + match._id, requestOptions)
       .then(handleResponse)

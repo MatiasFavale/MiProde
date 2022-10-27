@@ -31,7 +31,7 @@ class PlayersPage extends React.Component {
     if(teams.length === 0){
       actions.loadTeams(userLogin)
       .then(success => {
-        console.log(success)
+        console.log("success")
       })
       .catch(error =>{
         alert("loading champion failed " + error);
@@ -41,13 +41,11 @@ class PlayersPage extends React.Component {
 
 
   handleItemChanged = (jugador, event) => {
-    debugger;
     jugador[event.target.name] = event.target.value;
     this.props.actions.changePlayerGoals(jugador,this.props.players);
   }
 
   handleItemChampionChanged = (event) => {
-    debugger;
     this.props.actions.changeChampion(this.props.campeon ,event.target.value);
   }
 
@@ -117,7 +115,6 @@ PlayersPage.propTypes = {
 //Seccion Redux
 function mapStateToProps(state, ownProps){
   //const slug = ownProps.player.params.slug;  
-  debugger;
   var sChampCode = state.campeon.code;
   /*
   if(state.teams.length === 0){

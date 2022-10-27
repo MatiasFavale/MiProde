@@ -4,12 +4,12 @@ import { func } from "prop-types";
 import { beginApiCall, apiCallError } from "../apiStatusActions";
 
 export function CreatePredictionSuccess(matches,predictions){
-    debugger;
+    
     return {type: types.CREATE_PREDICTION_SUCCESS, matches,predictions};
 }
 
 export function loadPredictionSuccess(predictions){
-    debugger;
+    
     return {type: types.LOAD_PREDICTION_SUCCESS, predictions};
 }
 
@@ -18,7 +18,7 @@ export function savePrediction(user, match, matches,predictions){
         dispatch(beginApiCall());
         return predictionsApi.savePrediction(user,match)
         .then(savedPrediction => {
-            debugger;
+            
             dispatch(CreatePredictionSuccess(matches,predictions));
             /*
             course.id

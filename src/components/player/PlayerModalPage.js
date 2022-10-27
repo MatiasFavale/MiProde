@@ -18,7 +18,6 @@ const PlayerModalPage = ({
   saving = false,
   errors = {}
 }) => {
-  console.log(player);
   return (
     <>
       <Button onClick={onShow} variant="secondary">Elegir Jugador</Button>

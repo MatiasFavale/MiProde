@@ -5,7 +5,7 @@ import TextInput from "../common/TextInput";
 import PropTypes from "prop-types";
 
 const TableFixture = (matchesTab, errors = {}, onChange, onSaveClick) => {
-    console.log(matchesTab);
+    
   return (
     <>
     <table hidden={false} className="table table-striped table-bordered table-hover table-dark tableHeight">

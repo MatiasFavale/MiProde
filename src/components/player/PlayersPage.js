@@ -26,7 +26,6 @@ class PlayersPage extends React.Component {
   }
 
   handleItemChanged = (jugador, event) => {
-    debugger;
     jugador[event.target.name] = event.target.value;
     this.props.actions.changePlayerGoals(jugador,this.props.players);
   }
@@ -79,7 +78,6 @@ PlayersPage.propTypes = {
 //Seccion Redux
 function mapStateToProps(state, ownProps){
   //const slug = ownProps.player.params.slug;  
-  debugger;
   return {
     players: 
       state.players.map(player => {

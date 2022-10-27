@@ -51,7 +51,7 @@ function ManageTeamModal({teams, points, point={}, loadTeams, loadPoints, savePo
     setShow(false);
     setSaving(true);
     var oContext = this;
-    debugger;
+    
     savePoint(userLogin,champion, false).then(() => {        
         loadPoints(userLogin)
         .catch(error =>{
@@ -110,7 +110,7 @@ ManageTeamModal.propTypes = {
 
 
 function mapStateToProps(state, ownProps){  
-  debugger;
+  
   var oPoint = {};
   var sTeamChamp = "";
   var sResultadoChamp = -1;

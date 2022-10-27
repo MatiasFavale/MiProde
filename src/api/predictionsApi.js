@@ -11,7 +11,6 @@ export function getProdes(userLogin) {
         headers: myHeaders,
         redirect: 'follow'
     };
-    console.log(baseUrlProde);
     return fetch(baseUrlProde, requestOptions)
         //.then(response => response.text())
         .then(handleResponse)
@@ -19,7 +18,6 @@ export function getProdes(userLogin) {
 }
 
 export function savePrediction(userLogin, prediction) {
-    debugger;
     const predictionData = {
         match:prediction.code, 
         teamOne: prediction.teamOne,

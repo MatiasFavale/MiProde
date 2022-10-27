@@ -6,28 +6,28 @@ import { beginApiCall, apiCallError } from "../apiStatusActions";
 
 
 export function changeChampionSuccess(campeon, seleccionado){
-    debugger;
+    
     var objectData = {campeon, seleccionado};
     return {type: types.CHANGE_CAMPEON, objectData};
 }
 
 export function saveChampionSuccess(campeon){
-    debugger;
+    
     return {type: types.SAVE_CAMPEON_SUCCESS, campeon};
 }
 
 
 
 export function changeChampion(campeon, seleccionado){
-    debugger;
+    
     return function(dispatch, getState){
-        debugger;
+        
         dispatch(changeChampionSuccess(campeon, seleccionado));
     }
 }
 
 export function saveChampion(userLogin, campeon){
-    debugger;
+    
     return function(dispatch){
         dispatch(beginApiCall());
         //courseApi

@@ -3,7 +3,6 @@ var sUrlHeroku = "https://miprode.herokuapp.com";
 const baseUrlProde = sUrlHeroku + "/api/points/";
 
 export function savePoints(userLogin, point, isPlayerSelect) {
-    debugger;
     var sChampionId = "";
     var sPlayerId = "";
     if(isPlayerSelect){
@@ -40,7 +39,6 @@ export function savePoints(userLogin, point, isPlayerSelect) {
         headers: myHeaders,
         redirect: 'follow'
     };
-    console.log(baseUrlProde);
     return fetch(baseUrlProde, requestOptions)
         //.then(response => response.text())
         .then(handleResponse)

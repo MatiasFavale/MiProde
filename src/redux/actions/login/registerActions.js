@@ -12,12 +12,12 @@ export function createUserSuccess(user){
 }
 
 export function loginUserSuccess(userLogin){
-    debugger;
+    
     return {type: types.LOGIN_USER_SUCCESS, userLogin};
 }
 
 export function loadLoginLocalStSuccess(userLogin){
-    debugger;
+    
     return {type: types.LOAD_LOGIN_LOCALST_SUCCESS, userLogin};
 }
 
@@ -28,7 +28,7 @@ export function loadLogoutLocalStSuccess(){
 
 export function saveRegister(register){
     return function(dispatch, getState){
-        debugger;
+        
         dispatch(beginApiCall());
         return registerApi.postUser(register)
         .then(savedRegister => {
@@ -43,7 +43,7 @@ export function saveRegister(register){
 
 export function saveRegisterCode(register){
     return function(dispatch, getState){
-        debugger;
+        
         dispatch(beginApiCall());
         return registerApi.postUserCode(register)
         .then(savedRegister => {
@@ -59,7 +59,7 @@ export function saveRegisterCode(register){
 
 export function loginUser ( user ){
     return function(dispatch, getState){
-        debugger;
+        
         dispatch(beginApiCall());
         return registerApi.loginUser(user)
         .then(logUser => {
@@ -74,14 +74,14 @@ export function loginUser ( user ){
 
 export function loadLoginLocalSt ( user ){
     return function(dispatch, getState){
-        debugger;
+        
         dispatch(loadLoginLocalStSuccess(user));
     }
 }
 
 export function loadLogoutLocalSt (  ){
     return function(dispatch, getState){
-        debugger;
+        
         dispatch(loadLogoutLocalStSuccess());
     }
 }

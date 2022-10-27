@@ -5,17 +5,17 @@ import { func } from "prop-types";
 import { beginApiCall, apiCallError } from "../apiStatusActions";
 
 export function CreatePointSuccess(players,points){
-    debugger;
+    
     return {type: types.CREATE_POINT_SUCCESS, players,points};
 }
 
 export function loadPointSuccess(points){
-    debugger;
+    
     return {type: types.LOAD_POINT_SUCCESS, points};
 }
 
 export function changePointDisplay(points,name, value){
-    debugger;
+    
     //points[0][name] = value;
     var pointChange = {"name":name,"value": value};
     var objectData = {Points:points, Cambios:pointChange};
@@ -35,7 +35,7 @@ export function savePoint(user, point, isPlayerSelect, players,points){
         dispatch(beginApiCall());
         return pointsApi.savePoints(user,point, isPlayerSelect)
         .then(savedPoint => {
-            debugger;
+            
             dispatch(CreatePointSuccess(players,points));
             /*
             course.id
@@ -67,13 +67,13 @@ export function loadPoint(userLogin){
 export function changePoint (points, name, value ){
     
     return function(dispatch, getState){
-        debugger;
+        
         dispatch(changePointDisplay(points,name, value));
     }
 }
 
 export function savePointsEnable(userLogin){
-    debugger;
+    
     return function(dispatch){
         dispatch(beginApiCall());
         //courseApi

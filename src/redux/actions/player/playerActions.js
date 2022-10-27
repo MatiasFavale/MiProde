@@ -34,15 +34,12 @@ export function loadPlayers(userLogin){
 }
 
 export function changePlayer(player, players){
-    debugger;
     return function(dispatch, getState){
-        debugger;
         dispatch(changePlayerSuccess(players));
     }
 }
 
 export function saveGoals(userLogin, player,players){
-    debugger;
     return function(dispatch){
         dispatch(beginApiCall());
         //courseApi

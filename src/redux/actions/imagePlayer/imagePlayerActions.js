@@ -12,7 +12,7 @@ export function changeImagesPlayers(imagePlayers){
 export function changeImage(imagePlayers){
     matches.filter(nfilter=>nfilter.code === match.code)[0].change = "1";
     return function(dispatch, getState){
-        debugger;
+        
         dispatch(changeImagesPlayers(matches));
     }
 }

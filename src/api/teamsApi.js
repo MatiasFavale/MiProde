@@ -12,8 +12,6 @@ export function getTeams(userLogin) {
         headers: myHeaders,
         redirect: 'follow'
     };
-
-    console.log(baseUrl);
     return fetch(baseUrl, requestOptions)
         //.then(response => response.text())
         .then(handleResponse)

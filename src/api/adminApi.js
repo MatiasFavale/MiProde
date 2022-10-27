@@ -9,7 +9,6 @@ const baseUrlFive = sUrlHeroku + "/api/postChampion/";
 const baseUrlSix = sUrlHeroku + "/api/savePointsUserChampion/";
 //.local. 
 export function savePointsUser(userLogin, match) {
-    debugger;
     //ToDo user .then
     const resultsData = {
         code: match.code,
@@ -33,7 +32,7 @@ export function savePointsUser(userLogin, match) {
   }
 
   export function saveGoalsPlayer(userLogin, player) {
-    debugger;
+    
     //ToDo user .then
     const resultsData = {
         code: player.code,
@@ -55,7 +54,7 @@ export function savePointsUser(userLogin, match) {
   }
 
   export function savePointsEnable(userLogin) {
-    debugger;
+    
     //ToDo user .then
     const resultsData = {
         code: "Send"
@@ -77,7 +76,7 @@ export function savePointsUser(userLogin, match) {
 
 
   export function saveRunUpdateMatch(userLogin, match) {
-    debugger;
+    
     const resultsData = {
         code: match.code,
         RunUpdate: true
@@ -97,7 +96,7 @@ export function savePointsUser(userLogin, match) {
   }
 
   export function saveChampionUser(userLogin, campeon) {
-    debugger;
+    
     //ToDo user .then
     const resultsData = {
         champion: campeon.code
@@ -118,7 +117,7 @@ export function savePointsUser(userLogin, match) {
   }
 
   export function saveChampionTeam(userLogin, campeon) {
-    debugger;
+    
     //ToDo user .then
     const resultsData = {
         champion: campeon.code

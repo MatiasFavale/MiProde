@@ -24,7 +24,6 @@ export default function posicionesReducer(state = initialState.posicionesteams, 
                 "GrupoH": action.posicionesteams.filter(nfilter=>nfilter.group === "H")
                 .sort((a, b) => +b.difference-a.difference).sort((a, b) => a.points > b.points ? -1 : 1)
             }
-            debugger;
             action.posicionesteams = objectGroups;
             return action.posicionesteams;
         default:
