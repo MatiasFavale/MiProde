@@ -7,7 +7,7 @@ import ChampionModalPage  from "./ChampionModalPage";
 import Spinner from "../common/Spinner";
 import { toast } from "react-toastify";
 
-function ManageTeamModal({teams, points, point={}, loadTeams, loadPoints, savePoint, userLogin, changePoint, history, ...props}) {
+function ManageTeamModal({teams, points, point={}, loadTeams, loadPoints, savePoint, userLogin, changePoint, championFin, resultadoChampion, history, ...props}) {
   const [champion, setChampion] = useState({...props.champion});
   const [errors, setErrors] = useState({});
   const [show, setShow] = useState(false);
@@ -88,7 +88,9 @@ function ManageTeamModal({teams, points, point={}, loadTeams, loadPoints, savePo
             onChange={handleChange}
             onSave={handleSave}
             saving={saving}
-            errors={errors} />
+            errors={errors} 
+            championFin={championFin}
+            resultadoChampion={resultadoChampion}/>
     )  
 }
 
@@ -101,6 +103,8 @@ ManageTeamModal.propTypes = {
     loadPoints: PropTypes.func.isRequired,
     savePoint:PropTypes.func.isRequired,
     changePoint:PropTypes.func.isRequired,
+    championFin: PropTypes.string,
+    resultadoChampion: PropTypes.number,
     history: PropTypes.object.isRequired
 };
 
@@ -108,15 +112,35 @@ ManageTeamModal.propTypes = {
 function mapStateToProps(state, ownProps){  
   debugger;
   var oPoint = {};
+  var sTeamChamp = "";
+  var sResultadoChamp = -1;
   if(state.points.length > 0){
     const aPoint = [...state.points, {...[0], teamSelect:state.points[0].teamSelect}]
     oPoint = aPoint[1];
+  }
+
+  if(state.teams.length > 0){
+    if(state.teams.filter(nfilter=>nfilter.isChampion === true).length > 0){
+      sTeamChamp = state.teams.filter(nfilter=>nfilter.isChampion === true)[0].code
+    }
+  }
+
+  if(sTeamChamp !== "" ){
+    if(oPoint.teamSelect !== undefined && oPoint.teamSelect !== ""){
+      if(sTeamChamp === oPoint.teamSelect){
+        sResultadoChamp = 50;
+      }else{
+        sResultadoChamp = 0
+      }
+    }
   }
   return {
     teams: state.teams,
     points: state.points,
     point: oPoint,
-    userLogin:state.userLogin
+    userLogin:state.userLogin,
+    championFin: sTeamChamp,
+    resultadoChampion: sResultadoChamp
   };
 }
 

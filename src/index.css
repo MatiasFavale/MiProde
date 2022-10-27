@@ -31,11 +31,15 @@ nav {
 }
 
 .imgFlagSelect{
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   background-size: cover;
   border-radius: 59%;
   box-shadow: 1px 1px 2px #d316162e, -1px 0 2px #ef24242e;
+}
+
+.imgFlagCOPA{
+  content:url("./img/Copa/CUP.svg");
 }
 
 .imgFlagALE{
@@ -309,6 +313,9 @@ nav {
 }
 .letraNegra{
   color: black;
+}
+.labelRed{
+  color: red;
 }
 .labelGreen{
   color: green;

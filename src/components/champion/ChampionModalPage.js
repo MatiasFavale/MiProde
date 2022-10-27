@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import SelectInput from "../common/SelectInput";
 import PropTypes from "prop-types";
-import TextInput from "../common/TextInput";
+import TextInputChamp from "../common/TextInputChamp";
 
 const ChampionModalPage = ({
   champion,
@@ -16,7 +16,9 @@ const ChampionModalPage = ({
   onChange,
   onSave,
   saving = false,
-  errors = {}
+  errors = {},
+  championFin,
+  resultadoChampion
 }) => {
   return (
     <>
@@ -26,7 +28,27 @@ const ChampionModalPage = ({
       <div className="text-center">
       
         <img className={"rounded imgFlagSelect" + " imgFlag" + champion.teamSelect} ></img>
-        <br></br>          
+        <br></br>   
+        {
+        resultadoChampion === -1
+        ? <span></span> 
+        : resultadoChampion > 0
+        ? <span><strong className="labelGreen">+{resultadoChampion}</strong></span> 
+        : <span><strong className="labelRed">X</strong></span> 
+        }  
+      </div>
+      <br></br>
+      <div className="text-center">
+      
+        {
+       championFin !== "" 
+        ? <div>
+            <img className={"rounded imgFlagSelect" + " imgFlagCOPA"} ></img>
+            <img className={"rounded imgFlagSelect" + " imgFlag" + championFin} ></img>
+            <img className={"rounded imgFlagSelect" + " imgFlagCOPA"} ></img>
+          </div>
+        : <span></span> 
+        }        
       </div>
       <br></br>
       <Modal show={show} onHide={onClose} dialogClassName="modal-90w">
@@ -52,9 +74,10 @@ const ChampionModalPage = ({
                   error={errors.champion}
                 />
                 :
-                <TextInput
+                <TextInputChamp
                   name="teamSelect"
                   label=""
+                  placeholder="Campeon"
                   value={champion.teamSelect || ""}
                   disabled={!champion}
                 />
