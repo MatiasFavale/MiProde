@@ -32,7 +32,8 @@ export function saveRegister(register){
         dispatch(beginApiCall());
         return registerApi.postUser(register)
         .then(savedRegister => {
-            dispatch(createUserSuccess(register));
+            //PARA ENVIO MAIL dispatch(createUserSuccess(register));
+            dispatch(loginUserSuccess(savedRegister));
         })
         .catch(error => {
             dispatch(apiCallError(error));

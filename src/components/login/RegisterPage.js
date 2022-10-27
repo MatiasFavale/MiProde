@@ -65,9 +65,33 @@ function RegisterPage({userLogin, saveRegister, saveRegisterCode, history, ...pr
     event.preventDefault();
     if(!formIsValid()) return;
     setSaving(true);
+    
+    saveRegister(user).then((data) => {
+      setSaving(false);
+      //toast.success("Debe introducir el codigo enviado al mail");
+      setUser(prevRegister => ({
+        ...prevRegister,
+        habilitado: true
+      }))
+      toast.success("Usuario registrado y logueado correctamente.");
+      history.push("/");
+    }).catch(error => {
+        console.log(error);
+        setSaving(false);
+        setErrors({onSave: error.message});
+        toast.error(error.message);
+    });
+  }
+/* PARA ENVIO MAIL
+  function handleSave(event){
+    event.preventDefault();
+    if(!formIsValid()) return;
+    setSaving(true);
     if(user.habilitado){
       saveRegisterCode(user).then((data) => {
-        toast.success("Usuario registrado y logueado correctamente.");
+        debugger;
+        console.log(data);
+        toast.success("User Register and log.");
         history.push("/");
       }).catch(error => {
           setSaving(false);
@@ -76,6 +100,8 @@ function RegisterPage({userLogin, saveRegister, saveRegisterCode, history, ...pr
       });
     }else{
       saveRegister(user).then((data) => {
+        debugger;
+        console.log(data);
         setSaving(false);
         toast.success("Debe introducir el codigo enviado al mail");
         setUser(prevRegister => ({
@@ -83,13 +109,15 @@ function RegisterPage({userLogin, saveRegister, saveRegisterCode, history, ...pr
           habilitado: true
         })) 
       }).catch(error => {
+          console.log(error);
           setSaving(false);
           setErrors({onSave: error.message});
           toast.error(error.message);
       });
     }
-    
   }
+*/
+
   return (
     <RegisterForm 
       user={user} 
