@@ -13,7 +13,7 @@ const RegisterForm = ({
 }) => {
   return (
     <>
-    <button className="btn btn-outline-warning" onClick={() => onChangeCodeAuth(user)}>
+    <button hidden="true" className="btn btn-outline-warning" onClick={() => onChangeCodeAuth(user)}>
       Tengo Codigo!
     </button>
     <form onSubmit={onSave}>
