@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const TextInputNumber = ({ name, label, onChange, placeholder, value,   error, disabled=false }) => {
+const PasswordInput = ({ name, label, onChange, placeholder, value,   error,  disabled=false }) => {
   let wrapperClass = "form-group";
   if (error && error.length > 0) {
     wrapperClass += " " + "has-error";
@@ -12,8 +12,7 @@ const TextInputNumber = ({ name, label, onChange, placeholder, value,   error, d
       <label htmlFor={name}>{label}</label>
       <div className="field">
         <input
-          autoComplete="off"
-          type="number"
+          type="password"
           name={name}
           className="form-control"
           placeholder={placeholder}
@@ -27,7 +26,7 @@ const TextInputNumber = ({ name, label, onChange, placeholder, value,   error, d
   );
 };
 
-TextInputNumber.propTypes = {
+PasswordInput.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
@@ -36,4 +35,4 @@ TextInputNumber.propTypes = {
   error: PropTypes.string
 };
 
-export default TextInputNumber;
+export default PasswordInput;

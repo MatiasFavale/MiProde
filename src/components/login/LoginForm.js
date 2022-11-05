@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import FormTextInput from "../common/FormTextInput";
+import PasswordInput from "../common/PasswordInput";
 
 const LoginForm = ({
   user,
@@ -26,7 +27,7 @@ const LoginForm = ({
         onChange={onChange}
         error={errors.email}
       />
-      <FormTextInput
+      <PasswordInput
         name="password"
         label="Password"
         value={user.password}

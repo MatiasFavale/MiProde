@@ -12,6 +12,7 @@ const TextInput = ({ name, label, onChange, placeholder, value,   error, disable
       <label htmlFor={name}>{label}</label>
       <div className="field">
         <input
+          autoComplete="off"
           type="text"
           name={name}
           className="form-control"

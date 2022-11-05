@@ -12,6 +12,7 @@ const TextInputChamp = ({ name, label,  placeholder, value,   error,  disabled=f
       <label htmlFor={name}>{label}</label>
       <div className="field">
         <input
+          autoComplete="off"
           type="text"
           name={name}
           className="form-control"

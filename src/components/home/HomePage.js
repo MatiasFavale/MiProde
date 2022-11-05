@@ -19,7 +19,7 @@ const HomePage = ({onShow,  onClose, onNext, onBack, pages,  show}) => (
       <div hidden={!pages.Registro}>
           <p className="labelFont">Registro</p>
           <p className="letraBlanca">Para registrarse debe introducir, Nombre, Email, Password y presionar Enviar.</p>
-          <p className="letraBlanca">Llegar un codigo de autorizacion via mail para completar con el registro</p><br/>
+          {/*<p className="letraBlanca">Llegar un codigo de autorizacion via mail para completar con el registro</p><br/>*/}
           <Button onClick={onNext} variant="secondary"><BsFillArrowRightCircleFill /></Button>          
         </div>
         <div hidden={!pages.Puntos}>

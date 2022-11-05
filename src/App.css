@@ -53,38 +53,52 @@ nav {
 
 
 .classA{
-  border-bottom-color: orange;
-  border-left-color: orange;
-  
+  border-bottom-color: #570591;
+  border-left-color: #570591;
+  border-top-color: #570591;
+  border-right-color: #570591;
 }
 .classB{
-  border-bottom-color: blue;
-  border-left-color: blue;
+  border-bottom-color: #a5ecb2;
+  border-left-color: #a5ecb2;
+  border-top-color: #a5ecb2;
+  border-right-color: #a5ecb2;
 }
 .classC{
-  border-bottom-color: green;
-  border-left-color: green;
-}
-.classD{
-  border-bottom-color: yellow;
-  border-left-color: yellow;
-}
-.classE{
   border-bottom-color: red;
   border-left-color: red;
+  border-top-color: red;
+  border-right-color: red;
+}
+.classD{
+  border-bottom-color: #f7b335;
+  border-left-color: #f7b335;
+  border-bottom-color: #f7b335;
+  border-left-color: #f7b335;
+}
+.classE{
+  border-bottom-color: #8d0e0e60;
+  border-left-color: #8d0e0e60;
+  border-bottom-color: #8d0e0e60;
+  border-left-color: #8d0e0e60;
 }
 .classF{
-  border-bottom-color: skyblue;
-  border-left-color: skyblue;
+  border-bottom-color: #0de429;
+  border-left-color: #0de429;
+  border-bottom-color: #0de429;
+  border-left-color: #0de429;
 }
 .classG{
-  border-bottom-color: #9500ff;
-  border-left-color: #9500ff;
+  border-bottom-color: #4977f7;
+  border-left-color: #4977f7;
+  border-bottom-color: #4977f7;
+  border-left-color: #4977f7;
 }
-
 .classH{
-  border-bottom-color: #9dff00;
-  border-left-color: #9dff00;
+  border-bottom-color: #d4689b;
+  border-left-color: #d4689b;
+  border-bottom-color: #d4689b;
+  border-left-color: #d4689b;
 }
 
 .titleTable{
