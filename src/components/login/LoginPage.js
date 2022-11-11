@@ -59,13 +59,19 @@ function LoginPage({userLogin, onLogin, history, ...props}) {
     });
   }
   return (
-    <LoginForm 
-      user={user} 
-      errors={errors} 
-      onChange={handleChange}
-      onLogin={handleSave}
-      onCloseAlert={closeAlert}
-      saving={saving}/>
+    <>
+      {saving ? (
+        <Spinner/>
+      ) : (
+        <LoginForm 
+          user={user} 
+          errors={errors} 
+          onChange={handleChange}
+          onLogin={handleSave}
+          onCloseAlert={closeAlert}
+          saving={saving}/>
+      )}
+    </>
   )
   
 }

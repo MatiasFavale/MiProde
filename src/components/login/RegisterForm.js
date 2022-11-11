@@ -54,7 +54,7 @@ const RegisterForm = ({
       />  
       <br></br>
       <button type="submit" disabled={saving} className="btn btn-primary">
-        {saving ? "Registrando..." : "Registrarse"}
+        {saving ? <span>Registrando</span> : <span>Registrarse</span>}
       </button>
     </form>
     </>

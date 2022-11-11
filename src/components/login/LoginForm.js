@@ -36,7 +36,7 @@ const LoginForm = ({
       />
       <br></br>
       <button type="submit" disabled={saving} className="btn btn-primary">
-        {saving ? "Ingresando..." : "Ingresar"}
+        {saving ?  <span>Ingresando</span> : <span>Ingresar</span>}
       </button>
     </form>
   );
