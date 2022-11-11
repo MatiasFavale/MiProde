@@ -52,9 +52,9 @@ const RegisterForm = ({
         error={errors.title}
         disabled={!user.habilitado}
       />  
-
+      <br></br>
       <button type="submit" disabled={saving} className="btn btn-primary">
-        {saving ? "Saving..." : "Save"}
+        {saving ? "Registrando..." : "Registrarse"}
       </button>
     </form>
     </>
