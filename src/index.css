@@ -271,6 +271,12 @@ nav {
 .imagePlayerVLAHOVIC{
   content:url("./img/players/VLAHOVICBACK.svg");
 }
+.imagePlayerKEVIN{
+  content:url("./img/players/KEVINBACK.svg");
+}
+.imagePlayerENNER{
+  content:url("./img/players/ENNERBACK.svg");
+}
 
 .xGrupo{
   width: 380px;
