@@ -6,7 +6,7 @@ import TextInputDisabled from "../common/TextInputDisabled";
 import Button from 'react-bootstrap/Button';
 import { BsFillArrowRightCircleFill, BsFillArrowLeftCircleFill } from "react-icons/bs";
 
-const RankingsList = ({ rankings ,  errors = {}, onNext, onBack, visibleNext, visibleBack}) => (
+const RankingsList = ({ rankings ,  errors = {}, onNext, onBack, visibleNext, visibleBack, userlog}) => (
   <>
   
     <table className="table table-striped table-bordered table-hover table-dark">
@@ -23,14 +23,19 @@ const RankingsList = ({ rankings ,  errors = {}, onNext, onBack, visibleNext, vi
         {      
         rankings.map(userRank => {
           var sCode = userRank.Code;
+          var sClass
+          if(userRank.User ===  userlog.name){
+            sClass = "selectedPlayer";
+          }else{
+            sClass = "";
+          }
           return (
             <tr key={userRank.Code}>    
-              <td>{userRank.Position}</td>           
-              <td>{userRank.User}</td> 
-              <td>{userRank.Points}</td> 
-              <td>{userRank.Player}</td> 
-              <td>{userRank.Team}</td> 
-              
+              <td><p className={sClass}>{userRank.Position}</p></td>             
+              <td><p className={sClass}>{userRank.User}</p></td> 
+              <td><p className={sClass}>{userRank.Points}</p></td> 
+              <td><p className={sClass}>{userRank.Player}</p></td> 
+              <td><p className={sClass}>{userRank.Team}</p></td> 
             </tr>
           );
         })}

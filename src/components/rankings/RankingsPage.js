@@ -58,6 +58,7 @@ class RankingsPage extends React.Component {
                 <RankingsList  rankings={this.props.rankings.slice(this.state.initialState,this.state.endState)}
                   errors={this.state.errors} onNext={this.onNext.bind(this)} 
                   onBack={this.onBack.bind(this)} 
+                  userlog = {this.props.userLogin}
                   visibleNext={this.props.rankings.length > this.state.endState ? true : false}
                   visibleBack={this.state.initialState === 0 ? false : true}/>
               </>              
