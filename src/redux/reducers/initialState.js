@@ -10,7 +10,7 @@ export default {
     points:[],
     posicionesteams:{},
     rankings: [],
-    activegroup:{"grupo":false, "octavos":true, "cuartos": false, "semifinal": false, "final":false},
+    activegroup:{"grupo":false, "octavos":false, "cuartos": true, "semifinal": false, "final":false},
     campeon: {"code":""},
     apiCallsInProgress:0
 };

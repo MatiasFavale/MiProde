@@ -21,7 +21,7 @@ class ResultadosPage extends React.Component {
   componentDidMount(){
     const {matches, teams,  actions,  userLogin, activeItem, activegroup} = this.props;
     //if(matches.length === 0){
-      actions.loadMatches(userLogin, "OCT")
+      actions.loadMatches(userLogin, "CUA")
       .catch(error =>{
         alert("loading matches failed " + error);
       });
@@ -179,7 +179,7 @@ function mapStateToProps(state){
     }),
     teams: state.teams,
     userLogin:state.userLogin,
-    activeItem: {"grupo":false, "octavos":true, "cuartos": false, "semifinal": false, "final":false},
+    activeItem: {"grupo":false, "octavos":false, "cuartos": true, "semifinal": false, "final":false},
     activegroup: state.activegroup,
     loading:state.apiCallsInProgress > 0
   };
