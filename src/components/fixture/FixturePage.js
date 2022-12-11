@@ -22,7 +22,7 @@ class FixturePage extends React.Component {
 
     if(userLogin.message === "Success"){
     //if(matches.length === 0){
-      actions.loadMatches(userLogin, "CUA")
+      actions.loadMatches(userLogin, "SEM")
       .catch(error =>{
         alert("loading matches failed " + error);
       });
@@ -69,7 +69,7 @@ class FixturePage extends React.Component {
       })
       .catch(error => {
         toast.error("Fallo el grabado, reintente. ", error.message, {autoClose: false});
-        this.props.actions.loadMatches(this.props.userLogin, "CUA")
+        this.props.actions.loadMatches(this.props.userLogin, "SEM")
         .catch(error =>{
           alert("loading matches failed " + error);
         });
@@ -232,7 +232,7 @@ function mapStateToProps(state){
     teams: state.teams,
     predictions: state.predictions,
     userLogin:state.userLogin,
-    activeItem: {"grupo":false, "octavos":false, "cuartos": true, "semifinal": false, "final":false},
+    activeItem: {"grupo":false, "octavos":false, "cuartos": false, "semifinal": true, "final":false},
     activegroup: state.activegroup,
     loading:state.apiCallsInProgress > 0
   };
