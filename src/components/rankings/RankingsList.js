@@ -31,7 +31,11 @@ const RankingsList = ({ rankings ,  errors = {}, onNext, onBack, visibleNext, vi
           }
           return (
             <tr key={userRank.Code}>    
-              <td><p className={sClass}>{userRank.Position}</p></td>             
+              {
+            userRank.Position === 1 
+            ? <td><img className={"imgChampionCopa" + " imgFlagCOPA"} ></img></td> 
+            : <td><p className={sClass}>{userRank.Position}</p></td> 
+            }             
               <td><p className={sClass}>{userRank.User}</p></td> 
               <td><p className={sClass}>{userRank.Points}</p></td> 
               <td><p className={sClass}>{userRank.Player}</p></td> 
